@@ -1,0 +1,1704 @@
+1. Regarding the attaching of ENIto an instance,what does'warm attach' refer to?
+A. Attaching an ENIto an instance when it is stopped.
+B. This question doesn't make sense.
+C. Attaching an ENIto an instance when it is running
+D. Attaching an ENIto an instance during the launch processa
+
+ANS : A
+
+2. What is one key difference between an Amazon EBS-backed and an instance-store backed instance?
+A. Amazon EBS-backed instances can be stopped and restarted.
+B. Instance-store backed instances can be stopped .and restarted.
+C. Auto scaling requires using Amazon EBS-backed instances.
+D. Virtual Private Cloud requires EBS backed instances.
+
+ANS : A
+
+3. Your firm has uploaded a large amount of aerial image data to S3 In the past,in your on- premises environment,you used a dedicated group of seivers to oaten process this data and used Rabbit MQ -An open source messaging system to get job information to the seivers.Once processed the data would go to tape and be shipped offsite.Your manager told you to stay with the current design,and leverage AWS archival storage and messaging services to minimize cost.
+Which is correct?
+A Use SQS for passing job messages use Cloud Watch alarms to terminate EC2 worker instances when they become idle.Once data is processed,change the storage class of the S3 objects to Reduced Redundancy Storage.
+B. Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SOS Once data is processed,
+C. Change the storage class of the S3 objects to Reduced Redundancy Storage . Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS Once data is processed,change the storage class of the S3 objects to Glacier.
+D. Use SNS to pass job messages use Cloud Watch alarms to terminate spot worker instances when they become idle.Once data is processed,change the storage class of the S3 object to Glacier.
+
+ANS : C
+
+4. If Imodify a DB Instance or the DB parameter group assoc iated with the instance , should Ireboot the instance for the changes to take effect?
+A  No
+B. Yes
+
+ANS : B
+
+5. What will be the status of the snapshot. until the snapshot is complete.
+A. running
+B. working
+C. progressing
+D. pending
+
+ANS : D
+
+6.For each DB Instance class.what is the maXJimum size of assoc iated storage capacity?
+
+A. 5GB
+B. 1TB
+C. 6TB
+D. 500GB
+
+ANS : C
+
+7.True or False:When using IAM to control access to your RDS resources,the key names that can be used are case sensitive.For example, aws:CurrentTime is NOT equivalent to AWS:currenttime.
+A TRUE
+B. FALSE
+
+ANS : B
+
+8.Select  the incorrecdstatement
+
+A In Amazon EC2,the private IP addresses only returned to Amazon EC2 when the instance is stopped or terminated
+B. In Amazon VPC,an instance retains its private IP add"esses when the instance is stopped.
+C. In Amazon VPC,an instance does NOT retain its private IP addresses when the instance is stopped.
+D. In Amazon EC2,the private IP address is assoc iated exclusively with the instance for its lifetime
+
+ANS : C
+
+9.Out of the stripping options available for the EBS volumes,which one has the following disadvantage :
+'Doubles the amount of 1/0 required from the instance to EBS compared to RAID 0,bec.ause you're mirroring all writes to a pair of volumes,limiting how much you can stripe.' ?
+
+A  Raid 0
+B. RAID 1+0 (RAID 10)
+C. Raid 1
+D. Raid
+
+ANS:C
+
+Explanation:
+http://docs.aws.amazon.com/AWSEC2Jlatest/WindowsGuide/raid-config .html
+raid 0 and 1 are the common types . Raid 5 and 6 are not recommended because of the extended stripe . If you encounter this question on the exam Isuspect the answer options will be different.
+Raid 1 Disadvantage
+Does not provide a write performance improvement;requires more Amazon EC2 to Amazon EBS bandwidth than non-RAID configurations because the data is written to multiple volumes simultaneously.
+Raid 0 Disadvantage
+Performance of the stripe is limited to the worst performing volume in the set. Loss of a single volume results in a complete data loss for the array. Raid 5 and 6 notes
+RAID 5 and RAID 6 are not recommended for Amazon EBS because the parity write operations of these RAID modes consume some of the IOPS available to your volumes . Depending on the configuration of your RAID array,these RAID modes provide 20-30% fewer usable IOPS than a RAID 0 configuration. Increased cost is a factor with these RAID modes as well;when using identicalvolume sizes and speeds,a 2-volume RAID 0 array can outperform a 4-volume RAID 6 array that costs twice as much.
+
+10. How many types of block devices does Amazon EC2 support?
+A. 2
+B. 3
+C. 4
+D. 1
+
+ANS : A
+
+11. Read Replicas require a transactional storage engine and are only supported for the	storage engine
+
+A OraclelSAM
+B. MSSQLDB
+C. lnnoDB
+D. MylSAM
+
+ANS : C
+
+12.A customer has established an AWS Direct Connect connection to AWS.The link is up and routes are being advertised fromt unable to connect from EC2 instances inside its VPC to seivers residing in its datacenter.
+Which of the following options provide a viable solution to remedy this situation? (Choose 2 answers)
+A. Add a route to the route table with an iPsec VPN connection as the target .
+B. Enable route propagation to the virtual pinnate gateway (VGW).
+C. Enable route propagation to the customer gateway (CGW).
+D. Modify the route table of all Instances using the 'route' command.
+E. Modify the Instances VPC subnet route table by adding a route back to the custome(s on- premises environment.
+
+ANS:B,E
+
+13.What does the following command do with respect to the Amazon IEC2 security groups? ec2- revoke RevokeSecurityGrouplngress
+A. Removes one or more security groups from a rule.
+B. Removes one or more security groups from an Amazon EC2 instance.
+C. Removes one or more rules from a security group.
+0. Removes a security groupfrom our account .
+
+ANS:C
+
+14.To view information about an Amazon EBS volume,open the Amazon EC2 console at https://console .aws .amazon .com/ec2/,click	in the Navigation pane.
+A  EBS
+8. Describe
+C. Details
+D. Volumes
+
+ANS:D
+
+15.Using Amazon IAM. can Igive permission based on organizational groups?
+A. Yes but only in certain cases
+B. No
+C. Yes always
+
+ANS:C
+
+16.Can the string value of 'Key' be prefixed with :aws:"?
+A. Only in GovCloud
+B. Only for S3 not EC2
+C. Yes
+D. No
+
+ANS:D
+
+17.Is creating a Read Replica of another Read Replica supported?
+A. Only in certain regions
+B. Only with MSSQL based RDS
+C. Only for Oracle RDS types
+D. No
+
+ANS:B
+
+
+18.Are Reserved Instances available for Multi-AZ Deployments?
+A. Only for Cluster Compute instances
+B. Yes for allinstance types
+C. Only for M3instance types
+D. No
+
+ANS:B
+
+19.Fill in the blanks:'To ensure failover capabilities,consider using a	for incoming traffic on a network interface".
+A. primary public IP
+B. secondary private IP
+@ C.secondary public IP
+D.add on secondary IP
+
+ANS:B
+
+20.Can Amazon SJ uploads resume on failure or do they need to restart?
+A Restart from beginning
+B. You can resume them,if you flag the "resume on failure" option before uploading.
+C. Resume on failure
+D. Depends on the file size
+
+ANS:C
+
+21.By default,when an EBSvolume is attached to a Windows instance,it may show up as any drive letter on the instance.You can change the settings of the	Service to set the drive letters of the EBSvolumes per your specifications .
+A. EBSConfig Service
+B. AMIConfig Service
+C. Ec2Config Service
+D. Ec2-AMIConfig Service
+
+ANS: C
+
+22.Can I delete a snapshot of the root device of an EBS volume used by a registered AMI?
+A Only via API
+B. Only via Console
+C. Yes
+D. No
+
+ANS: D
+
+23.How are the EBS snapshots saved on Amazon S3?
+
+A. Exponentially
+B. Incrementally
+C. EBS snapshots are not stored in the Amazon S3
+D. Decrementally
+
+ANS: B
+
+24.Which of the following cannot be used in Amazon EC2 to control who has access to specific Amazon EC2 instances?
+A. Security Groups
+B. IAM System
+C. SSH keys
+D. Windows passwords
+
+ANS: B
+
+
+25.The new DB Instance that is created when you promote a Read Replica retains the backup window period.
+A. TRUE
+B. FALSE
+
+ANS: A
+
+26.What happens to the data on an instance if the instance reboots (intentionally or unintentionally)?
+A. Data will be lost
+B. Data persists
+C. Data may persist however cannot be sure
+
+ANS: B
+
+27.How can Ichange the security group membership for interfaces owned by other AWS,such as Elastic Load Balancing?
+A. By usingthe service specific console or APl\CLI commands
+B. None of these
+C. Using Amazon EC2 APl/CLI
+D. using all these methods
+
+Answer:A
+
+28.Amazon EC2 has no Amazon Resource Names (ARNs ) because you can'specify a particular Amazon EC2 resource in an IAM policy.
+A. TRUE
+B. FALSE
+
+ANS: A
+
+29.Can the string value of 'Key' be prefix·ed with laws?
+A.  No
+B. Only for EC2 not S3
+C. Yes
+D. Only for S3 not EC
+
+ANS: A
+
+30.Amazon RDS DB snapshots and automated backups are stored in
+A. Amazon S3
+8. Amazon ECS Volume
+C. Amazon RDS
+D. Amazon EMR
+
+ANS: A
+
+31.Are you able to integrate a multi-factor token service witm the AWS Platform?
+A. Yes , you can integrate private multi-factor token devices to authenticate users to the AWS platform.
+B. No,you cannot integrate multi-factor token devices with the AWS platform .
+C. Yes,using the AWS multi-factor token devices to authenticate users on the AWS platform .
+
+ANS: A
+
+32.Because of the extensibility limitations of striped storage attached to Windows Seiver,Amazon RDS does not currently support increasing storage on a	DB Instance.
+A.  SQL Seiver
+B. MySQL
+C. Oracle
+
+ANS: A
+
+33.Is there a limit to the number of groups you can have?
+A.  Yes for all users except root
+B. No
+C. Yes unless special permission granted
+D. Yes for all users
+
+ANS: C
+
+34.Do the system resources on the Micro instance meet the recommended configuration for Oracle?
+A.  Yes completely
+B. Yes but only for certain situations
+C. Not in any circumstance
+
+ANS: B
+
+35.If you are using Amazon RDS Provisioned IOPS storage with MySQL and Oracle database engines,you can scale the throughput of your database Instance by specifying the IOPS rate from	_
+A. 1,000 to 1,00,000
+B. 100 to 1,000
+C. 10, 000 to 1, 00, 000
+D. 1, 000 to 10, 000
+
+ANS: D
+
+36.Is there a method in the IAM systemto allow or deny access to ai specific instance?
+
+A. Only for VPC based instances
+B. Yes
+C. No
+
+ANS: B
+
+37.The	service is targeted at organizations with multiple users or systems that use AWS products such as Amazon EC2,Amazon SimpleDB,and the AWS Management Console.
+A. Amazon RDS
+B. AWS Integrity Management
+C. AWS Identity and Access Management
+D. Amazon EMR
+
+ANS: C
+
+38.My Read Replica appears "stuck" after a Multi-AZ failover and is unable to obtain or apply updates fromthe source DB Instance. What do Ido?
+A You will need to delete the Read Replica and create a new one to replace it .
+B. You will need to disassociate the DB Engine and re associate it.
+C. The instance should be deployed to Single AZ and then moved to Multi-AZ once again
+D. You will need to delete the DB Instance and create a new one to replace it .
+
+ANS: A
+
+39.Do the Amazon EBSvolumes persist independently fromthe running life of an Amazon EC2 instance?
+A. No
+B. Only if instructed to when created
+C. Yes
+
+ANS: C
+
+40.Does AWS Direct Connect allow you access to all Availabilities Zones within a Region?
+A. Depends on the type of connection
+B. No
+C. Yes
+D. Only when there's just one availability zone in a region.If there are more than one,only one availability zone can be accessed directly.
+
+ANS: C
+
+41.Does Dynamic DB suport in-place atomic updates?
+A. It is not defined
+8. No
+C. Yes
+D. It does support in-place non-atomic updates
+
+ANS: C
+
+42.It is advised that you watch the Amazon CloudWatch ..	.. metric (available via the AWS Management Console or Amazon Cloud Watch APls) carefully and recreate the Read Replica should it fall behind due to replication errors.
+A. Write Lag
+B. Read Replica
+C. Replica Lag
+D. Single Replica
+
+ANS: C
+
+43.After an Amazon VPC instance is launched,can Ichange the VPC security groups it belongs to?
+A. No.You cannot .
+B. Yes .You can.
+C. Only if you are the root user
+D. Only if the tag "VPC_Change_Group" is true
+
+ANS: B
+
+44.What's an ECU?
+A  Extended Cluster User. B  None of these.
+C  Elastic Computer Usage.
+D  Elastic Compute Unit.
+
+ANS: D
+
+45.What is a Security Group?
+
+A. None of these
+B. A list of users that can access Amazon EC2 instances
+C. An Access Control List (ACL) for AWS resources.
+D. A firewall for inbound traffic. built-in around every Amazon EC2 instance.
+
+ANS: D
+
+46.The one-time payment for Reseived Instances is	refundable if the reseivation is cancelled.
+A. always
+B. in some circumstances
+C. never
+
+ANS: C
+
+47.Do the Amazon EBSvolumes persist independently fromthe running life of an Amazon EC2 instance?
+A. Only if instructed to when created
+B. Yes
+C. No
+
+ANS: B
+
+48.Which AWS instance address has the following characteristics?:"If you stop an instance,its Elastic IP address is unmapped,and you must remap when you restart the instance."
+A.  VPC Addresses
+B. EC2 Addresses
+C. Both A and B
+D. None of these
+
+ANS: B
+
+49.Select the correct set of steps for exposing the snapshot only to specific AWS accounts
+A.   Select public for all the accounts and check mark those accounts with whom you want to expose the snapshots and click save.
+B. Select Private , enter the IDs of those AWS accounts , and click Save .
+@ C. Select Public,enter the IDs of those AWS accounts,and click S.ave.
+   D. Select Public,mark the IDs of those AWS accounts as private,and click Save.
+
+ANS: B
+
+50.Which of the following are characteristics of Amazon VPC subnets? Choose 2 answers
+A. Each subnet spans at least 2 Availability Zones to provide a high-availability environment .
+B. Each subnet maps to a single Availability Zone .
+C. CIDR block mask of/25 is the smallest range supported.
+D. By default,all subnets can route between each other,whether they are private or public .
+E. Instances in a private subnet can communicate with the Internet only if they have an Elastic IP.
+
+ANS: B,D
+
+51.You need to configure an Amazon S3 bucket to seive static assets for your public-facing web application. Which n bucket are set to public read? Choose 2 answers
+A. Set permissions on the object to public read during upload. 
+B. Configure the bucket ACL to set all objects to public read. 
+C. Configure the bucket policy to set all objects to public read.
+D. Use AWS Identity and Access Management roles to set the bucket to public read.
+E. Amazon S3 objects default to public read,so no action is needed.
+
+ANS:A,C
+
+52.When you resize the Amazon RDS DB instance,Amazon RDS will perform the upgrade during the next maintenance window.If you want the upgrade to be performed now,rather than waiting for the maintenance window,specify the	option.
+A  ApplyNow
+B. ApplySoon
+C. ApplyThis
+D. Applylmmediately
+
+ANS:D
+
+53.You have launched an Amazon Elastic Compute Cloud (EC2) instance into a public subnet with a primary private IP address assigned,an internet gateway is attached to the VPC,and the public route table is configured to send all Internet-based traffic to the Internet gateway. The instance security group is set to allow all outbound traffic but cannot access the internet . Why is the Internet unreachable fromthis instance?
+A. The instance does not have a public IP address .
+B. The internet gateway security group must allow all outbound traffic.
+C. The instance security group must allow all inbound traffic.
+D. The instance "Source/Destination check" property must be enabled.
+
+ANS:A
+
+
+54.How can the domain's zone apex,for example,"myzoneapexdomain.com",be pointed towards an Elastic Load Balancer?
+A.  By using an Amazon Route 53 Alias record
+B. By using an AAAA record
+C. By using an Amazon Route 53 CNAME record
+D. By using an A record
+
+ANS:A
+
+55.In the Amazon RDS which uses the SQL Seiver engine,what is the maximum size for a Microsoft SQL Seiver DB Instance with SQL Seiver Express edition?
+A. 10 GB per DB
+B. 100 GB per DB
+C. 2 TB per DB
+D. 1TB per DB
+
+ANS:A
+
+56.Amazon RDS supports SOAP only through  	
+A  HTTP or HTTPS
+B  TCP/IP
+C. HTTP
+D  HTTPS
+
+ANS:D
+
+
+57.For which of the following use cases are Simple Workflow Service (SWF) and Amazon EC2 an appropriate solution? Choose 2 answers
+A. Using as an endpoint to collect thousands of data points per hour from a distributed fleet of sensors
+B. Managing a multi-step and multi-decision checkout process of an e-commerce website
+C. Orchestratingthe execution of distributed and auditable business processes
+D. Using as an SNS (Simple Notification Service) endpoint to trigger execution of video transcoding jobs
+E. Using as a distributed session store for your web application
+
+ANS:B,C
+
+58.Which services allow the customer to retain full administrative privileges of the underlying EC2 instances? Choose 2 answers
+A. Amazon Relational Database Service
+B. Amazon Elastic Map Reduce
+C. Amazon ElastiCache
+0. Amazon DynamoDB
+E. AWS Elastic Beanstalk
+
+ANS:B,E
+
+59.Which features can be used to restrict access to data in S3? Choose 2 answers
+A. Set an S3 ACL on the bucket or the object.
+B. Create a CloudFront distribution for the bucket .
+C. Set an S3 bucket policy.
+D. Enable IAM Identity Federation
+E. Use S3 Virtual Hosting
+
+ANS:A,C
+
+60.Amazon RDS creates an SSL certificate and installs the certificate on the DB Instance when Amazon RDS provisions the instance.These certificates are signed by a certificate authority. The	is stored athttps://rds.amazonaws .com/doc/rds-ssl-ca-cert .pem.
+A. private key
+8. foreign key
+C. public key
+D.protected key
+
+ANS:C
+
+61.Which of the following are valid statements about Amazon S3? Choose 2 answers
+A. S3 provides read-after-write consistency for any type of PUT or DELETE.
+B. Consistency is not guaranteed for any type of PUT or DELETE.
+C. A successful response to a PUT request only occurs when a complete object is saved.
+D. Partially saved objects are immediately readable with a GET after an oveiwrite PUT.
+E. S3 provides eventual consistency for oveiwrite PUTS and DELETES.
+
+ANS:C,E
+
+62.How can an EBS volume that is currently attached to an EC2 instance be migrated from one Availability Zone to another?
+A Detach the volume and attach it to another EC2 insta nce in the other AZ.
+B. Simply create a new volume in the other AZ and specify the originalvolume as the source.
+C. Create a snapshot of the volume,and create a new vclume from the snapshot in the other AZ.
+D. Detach the volume,then use the ec2-migrate-voiume command to move it to another AZ.
+
+ANS:C
+
+63.You launch an Amazon EC2 instance without an assigned AWS identity andlAccess Management (IAM) role.Later,you decide that the instance should be running with an IAM role.Which action must you take in order to have a running Amazon EC2 instance with an IAM role assigned to it?
+A  Create an image of the instance,and register the image with an IAM role assigned and an Amazon EBS volume mapping.
+B. Create a new IAM role with the same permissions as an existing IAM rnle,and assign it to the running instance.
+C. Create an image of the instance,add a new IAM role with the same permissions as the desired IAM role,and deregister the image with the new role assigned.
+D. Create an image of the instance,and use this image to launch a new instance with the desired IAM role assigned.
+
+ANS:D
+
+64.Does Amazon Route 53 support NS Records?
+A  Yes,it supports Name Service records.
+B. No
+C. It supports only MX record's.
+D. Yes,it supports Name Server records.
+
+ANS:D
+
+65.A customer wants to leverage Amazon Simple Storage Service (S3) and Amazon Glacier as part of their backup and archive infrastructure.The customer plans to use third-party software to support this integration. Which approach will limit the access of the third party software to only the Amazon S3  bucket  named  "company-backup"?
+A  A custom bucket policy limited to the Amazon S3 API in thee Amazon Glacier archive "company- backup"
+B. A custom bucket policy limited to the Amazon S3 API in "company-backup"
+C. A custom IAM user policy limited to the Amazon S3 APIfor the Amazon Glacier archive "company-backup".
+D. A custom IAM user policy limited to the Amazon S3 API in "company-backup".
+
+ANS:D
+
+66.You are working with a customer who has  10 TB of archival data that they wa.nt to migrate to Amazon Glacier. The customer has a 1-Mbps connection to the Internet. Which service or feature provides the fastest method of getting the data into Amazon Glacier?
+A. Amazon Glacier multipart upload
+B. AWS Storage Gateway
+C.VM Import/Export
+D.AWS Import/Export
+
+ANS:A
+ 
+67.--------embodies the "share-nothing" architecture and essentially involves breaking a large database into several smaller databases.Common ways to split a database include 1) splitting tables that are not joined in the same query onto different hosts or 2) duplicating a table across multiple hosts and then using a hashing algorithm to determine which host receives a1 given update.
+A. Sharding
+B. Failure recovery
+C. Federation
+D. DDL operations
+
+ANS:A
+
+
+68.You are using an m1.small EC2 Instance with one 300 GB EBS volume to host a relational database.You determined that write throughput to the database needs to be increased . Which of the following approaches can help achieve this? Choose 2 answers
+A. Use an array of EBS volumes.
+B. Enable Multi-AZ mode.
+C. Place the instance in an Auto Scaling Groups 0 D. Add an EBS volume and place into RAID 5. 0 E. Increase the size of the EC2 Instance.
+F. Put the database behind an Elastic Load Balancer.
+
+ANS:D,E
+
+69.Which procedure for backing up a relational database on EC2 that is using a set of RAIDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?
+A  1.Detach EBS volumes,2.Start EBS snapshot of volumes,3.Re-attach EBS volumes
+B. 1.Stop the EC2 Instance. 2. Snapshot the EBS vclumes
+C. 1.Suspend disk 110,2.Create an image of the EC2 Instance,3. Resume disk 110
+D. 1.Suspend disk 110,2.Start EBS snapshot of volumes,3.Resume disk 110
+E. 1.Suspend disk 110,2.Start EBS snapshot of volumes,3.Wait for snapshots to complete,4.
+   Resume disk 110
+   
+ANS:B
+
+70.True or False:When you add a rule to a DB security group, you do not need to specify port number or protocol.
+A. Depends on the ROMS used
+B. TRUE
+C. FALSE
+
+ANS:B
+
+71.A company needs to deploy virtual desktops to its customers in a virtual private cloud,leveraging existing security controls. Which set of AWS services and features will meet the company's requirements?
+A. Virtual Private Network connection.AWS Directory Services,and Cla.ssiclink
+B. Virtual Private Network connection.AWS Directory Services, and Amazon Workspaces
+@ C. AWS Directory Service,Amazon Workspaces,and AWS Identity and Access Management
+D. Amazon Elastic Compute Cloud,and AWS Identity and Access Management
+
+ANS:B
+
+72.A client application requires operating system privileges on a relational database seiver. What is an appropriate configuration for a highly available database architecture?
+A.  A standalone Amazon EC2 instance
+B. Amazon RDS in a Multi-AZ configuration
+C. Amazon EC2 instances in a replication configuration utilizing a single Availability Zone
+D. Amazon EC2 instances in a replication configuration utilizing two d'ifferent Availability Zones
+
+ANS:D
+
+
+73.Will I be alerted when automatic failover occurs?
+A. Only if SNS configured
+B. No
+C. Yes
+D. Only if Cloudwatch configured
+
+ANS:A
+
+74.Which of the following features ensures even distribution of traffic to Amazon EC2 instances in multiple Availability Zones registered with a load balancer?
+A. Elastic Load Balancing request routing
+B. An Amazon Route 53 weighted routing policy
+C. Elastic Load Balancing cross-zone load balancing
+D. An Amazon Route 53 latency routing policy
+
+ANS:C
+
+75.In AWS,which security aspects are the custome(s  responsibility? Choose 4 answers
+A. Security Group and ACL (Access Control List) settings
+B. Decommissioning storage devices
+C. Patch management on the EC2 instance's operating system
+D. Life-c ycle management of IAM credentials
+E. Controlling physical access to compute resources
+F. Encryption of EBS (Elastic Block Storage) volumes
+
+ANS:A,C,D,F
+
+76.You nave multiple Amazon EC2 instances running in a cluster across multiple Availability Zones within the same region. What combination of the following should be used to ensure the highest network performance (packets per second),lowest latency,and lowest jitter? Choose 3 answers
+A. Amazon EC2 placement groups
+B. Enhanced networking
+C. Amazon PV AMI 
+D. Amazon HVM AMI 
+E. Amazon Linux
+F. Amazon VPC
+
+ANS:B,D,F
+
+77.Which of the following are characteristics of a reseived instance? Choose 3 answers
+A. It can be migrated across Availability Zones
+B. It is specific to an Amazon Machine Image (AMI)
+C. It can be applied to instances launched by Auto Scaling
+D. It is specific to an instance Type
+E. It can be used to lower Total Cost of Ownership (TCO) of a system
+
+ANS:A,C,E
+
+78.What are characteristics of Amazon S3? Choose 2 answers
+A. S3 allows you to store objects of virtually unlimited size.
+B. S3 offers Provisioned IOPS.
+C. S3 allows you to store unlimited amounts of data. 0 D. S3 should be used to host a relational database. 0 E. Objects are directly accessible via a URL.
+
+ANS:C,E
+
+79.A company is storing data on Amazon Simple Storage Service (S3).The company's security policy mandates that data is encrypted at rest. Which of the following methods can achieve this? Choose 3 answers
+A. Use Amazon S3 seiver-side encryption with AWS Key Management Service managed keys.
+B. Use Amazon S3 seiver-side encryption with customer-provided keys.
+C. Use Amazon S3 seiver-side encryption with EC2 key pair.
+0. Use Amazon S3 bucket policies to restrict access to the data at rest..
+E. Encrypt the data on the client-side before ingesting to Amazon S3 usingtheir own master key.
+F. Use SSL to encrypt the data while in transit to Amazon S3.
+
+ANS:A,B,E
+
+80.If you want to launch Amazon Elastic Compute Cloud (EC2) instances and assign each instance a predetermined private IP address you should:
+A. Launch the instance from a private Amazon Machine Image (AMI).
+B. Assign a group of sequential Elastic IP address to the instances.
+C. Launch the instances in the Amazon Virtual Private Cloud (VPC).
+D. Launch the instances in a Placement Group.
+E. Use standard EC2 instances since each instance gets a private Domain Name SelVice (DNS) already.
+
+ANS:C
+
+81.A customer is hosting their company website on a cluster of web seivers that are behind a public- facing load balancer. The customer also uses Amazon Route 53 to manage their public DNS.How should the customer configure the DNS zone apex record to point to the load balancer?
+A. Create an A record pointing to the IP address of the load balancer
+B. Create a CNAME record pointing to the load balancer DNS name.
+C. Create a CNAME record aliased to the load balancer DNS name.
+D. Create an A record aliased to the load balancer ONS name
+
+ANS: D
+
+82.You are designing Internet connectivity for your VPC.The Web seivers must be available on the Internet .The application must have a highly available architecture . Which alternatives should you consider? (Choose 2 answers)
+A. Configure a NAT instance in your VPC Create a default route via the NAT instance and associate it with all subnets Configure a DNS A record that points to the NAT instance public IP address.
+B. Configure a CloudFront distribution and configure the origin to point to the private IP addresses of your Web seivers Configure a Route53 CNAME record to your CloudFront distribution.
+C. Place all your web seivers behind EL8 Configure a Route53 CNMIEto point to the ELB ONS name .
+0. Assign BPs to all web seivers . Configure a Route53 record set with all EIPs. With health checks and ONS failover.
+E. Configure ELB with an EIP Place all your Web seivers behind ELB Configure a Route53 A record that points to the EIP. 
+
+ANS: C,D
+
+83.A web company is looking to implement an external payment service into their highly available application deployed in a VPC Their application EC2 instances are behind a public lacing ELS Auto scaling is used to add additional instances as traffic increases under normal load the application runs 2 instances in the Auto Scaling group but at peak it can scale 3x in size.The application instances need to communicate with the payment service over the Internet which requires whitelisting of all public IP addresses used to communicate with it .
+A maximum of 4 whitelisting IP addresses are allowed at a time and can be added through an API. How should they architect their solution?
+A. Route payment requests through two NAT instances setupfor High Availability and whitelist the Elastic IP addresses attached to the MAT
+instances.
+B. Whitelist the VPC Internet Gateway Public IP and route payment requests through the Internet Gateway.
+C. Whitelist the ELS IP addresses and route payment requests from the Application seivers through the ELS.
+D. Automatically assign public IP addresses to the application instances in the Auto Scaling group and run a script on boot that adds each instances public IP address to the payment validation whitelist API.
+
+ANS: A
+
+84.Your customer wishes to deploy an enterprise application to AWS which will consist of several web seivers,several application seivers and a small (SOGB) Oracle database information is stored,both in the database and the·file systems of the various seivers .The backup system must support database recovery whole seiver and whole disk restores,and individual file restores with a recovery time of no more than two hours.They have chosen to use RDS Oracle as the database Which backup architecture will meet these requirements?
+A. Backup RDS using automated daily DB backups Backupthe EC2 instances using AMls and supplement with file-level backup to S3 using traditional enterprise backup software to provide file level restore
+B. Backup RDS using a Multi-AZ Deployment Backup the EC2 instances using Amis,and supplement by copying file system data to S3 to provide file level restore.
+C. Backup RDS using automated daily DB backups Backup the EC2 instances using EBS snapshots and supplement with file-level backups to Amazon Glacier using traditional enterprise backup software to provide file level restore
+D. Backup RDS database to S3 using Oracle RMAN Backup the EC2 instances using Amis,and supplement with EBS snapshots for individual volume restore.
+
+ANS: A
+
+85.You have deployed a three-tier web application in a VPC with a CIOR block of 10 0 0 0/28 You initially deploy two web seivers,two application seivers, two database seivers and one NAT instance tor a total of seven EC2 instances The web.Application and database seivers are deployed across two availability zones (AZs).You also deploy an ELS in front of the two web seivers,and use Route53 for DNS Web (raffle gradually increases in the first few days following the deployment,so you attempt to double the number of instances in each tier of the application to handle the new load unfortunately some of these new instances failto launch .
+Which of the following could De the root caused? (Choose 2 answers)
+A.  The Internet Gateway (IGW) of your VPC has scaled-up adding more instances to handle the traffic spike,reducing the number of available private IP addresses for new instance launches.
+B. AWS reseives one IP address In each subnet's CIDR block for Routes 3 so you do not have enough addresses left to launch all of the new EC2
+instances.
+C. AWS reseives the first and the last private IP address in each subnet's CIDR block so you do not have enough addresses left to launch all of the new EC2 instances.
+D. The ELS has scaled-up.Adding more instances to handle the traffic reducingthe number of available private IP addresses for new instance launches .
+E. AWS reseives the first tour and the last IP address in each subnet's CIDR block so you do not have enough addresses left to launch all of the new EC2 instances .
+
+ANS: D,E
+
+86.Your company previously configured a heavily used,dynamically routed VPN connection between your on-premises data center and AWS.You recently provisioned a DirectConnect connection and would like to start using the new connection.After configuring DirectConnect settings in the AWS Console, which of the following options win provide the most seamless transition for your users?
+
+A. Delete your existing VPN connection to avoid routing loops configure your DirectConnect router with the appropriate settings and verity network traffic is leveraging DirectConnect .
+B. Configure your DireclConnect router with a higher 8GP priority man your VPN router,verify network traffic is leveraging Directconnect and then delete your existing VPN connection.
+C. Update your VPC route tables to point to the DirectConnect connection configure your DirectConnect router with the appropriate settings verify network traffic is leveraging DirectConnect and then delete the VPN c•onnection.
+D. Configure your DireclConnect router,update your VPC route tables to point to the DirectConnect connection,configure your VPN connection with a higher BGP pointy.And verify network traffic is leveraging the DirectConnect connection.
+
+ANS: C
+
+87.Company B is launching a new game app for mobile devices . Users will log into the game using their existing social media account to streamline data capture . Company B would like to directly save player data and scoring information fromthe mobile app to a DynamoDS table named Score Data When
+a user saves their game the progress data will be stored to the Game state S3 bucket . What is the best approach for storing data to DynamoDB and S3?
+A.   Use an EC2 Instance that is launched with an EC2 role providing access to the Score Data DynamoDB table and the GameState S3 bucket that communicates with the  mobile appvia web selVices.
+B. Use temporary security credentials that assume a role providing access to the Score Data DynamoDB table and the Game State S3 bucket using web identity federation.
+C. Use Login with Amazon allowing users to sign in with an Amazon acecunt providing the mobile appwith access to the Score Data DynamoDB table and the Game State S3 bucket .
+D. Use an IAM user with access credentials assigned a role providing access to the Score Data DynamoDB table and the Game State S3 bucket for distribution with the  mobile app.
+
+ANS: B
+
+88.Which ct the tollowmg are true regarding AW"5 Cloud Ira1r1Choose :J answers
+A. CloudTrail is enabled globally
+B. CloudTrail is enabled by default
+C. CloudTrail is enabled on a per-region basis
+0. CloudTrail is enabled on a per-selVice basis.
+E. Logs can be delivered to a single Amazon S3 bucket for ag_gregation.
+F. CloudTrail is enabled for all available selVices within a region.
+G. Logs can only be processed and delivered to the region in which they are generated.
+
+ANS:A,C,E
+
+89.A company needs to deploy services to an AWS region which they have not previously used.The company currently has an AWS identity and Access Management (IAM) role for the Amazon EC2 instances,which permits the instance to have access to Amazon DynamoDB.The company wants their EC2 instances in the new region to have the same privileges . How should the company achieve this?
+A. Create a new IAM role and associated policies within the new region
+B. Assign the existing IAM role to the Amazon EC2 instances in the new region
+C. Copy the IAM role and associated policies to the new region and attach it to the instances
+D. Create an Amazon Machine Image (AMI) of the instance and copy it to the desired region using the AMI Copy feature
+
+ANS: B
+
+90.You are building an automated transcription service in which Amazon EC2 worker instances process an uploaded audio file and generate a text file.You must store both of these files in the same durable storage untilthe text file is retrieved.You do not know what the storage capacity requirements are.
+Which storage option is both cost-efficient and scalable?
+A.  Multiple Amazon EBS volume with snapshots
+B. A single Amazon Glacier vault
+C. A single Amazon 83 bucket
+D. Multiple instance stores
+
+ANS: C
+
+91.A photo-sharing service stores pictures in Amazon Simple Storage Service {S3) and allows application sign-in using an OpenlD Connect-compatible identity provider. Which AWS Security Token Service approach to temporary access should you use for the Amazon S3 operations?
+A. SAML-based Identity Federation
+B. Cross-Account Access
+C. AWS Identity and Access Management roles
+D. Web Identity Federation
+
+ANS:D
+
+92.Explanation:A customer implemented AWS Storage Gateway with a gateway-cached volume at their main office .An event takes the link between the main and branch office offline. Which methods will enable the branch office to access their data? Choose 3 answers
+A. Use a HTIPS GET to the Amazon S3 bucket where the files are located.
+B. Restore by implementing a lifecycle policy on the Amazon S3 bucket .
+C. Make an Amazon Glacier Restore API call to load the files into another Amazon S3 bucket within four to six hours.
+D. Launch a new AWS Storage Gateway instance AMI in Amazon EC2,and restore from a gateway snapshot .
+E. Create an Amazon EBS volume from a gateway snapshot,and mount it to an Amazon EC2 instance.
+F. Launch an AWS Storage Gateway virtual iSCSI device at the branch office , and restore from a gateway snapshot.
+
+ANS:D,E,F 
+
+93.You would like to create a mirror image of your production environment in another region for disaster recovery purposes . Which of the following AWS resources do not need to be recreated in the second region? (Choose 2 answers)
+A. Route 53 Record Sets
+B. IM1 Roles
+C. Elastic IP Addresses (EIP)
+D. EC2 Key Pairs
+E. Launch configurations
+F. Security Groups
+
+ANS:A,B 
+
+94.An ERP application is deployed across multiple Af.s in a single region. In the event of failure,the Recovery Time Objective (RTO) must be less than 3 hours,and the Recovery Point Objective (RPO) must be 15 minutes the customer realizes that data corruption occurred roughly 1.5 hours ago.
+What DR strategy could be used to achieve this RTO and RPO in the event of this kind of failure?
+A. Take hourly 08 backups to S3,with transaction logs stored in S3 every 5 minutes .
+B. Use synchronous database master-slave replication between two availability zones.
+C. Take hourly 08 backups to EC2 Instance store volumes with transaction logs stored In S3 every 5 minutes.
+D. Take 15 minute 08 backups stored In Glacier with transaction logs stored in S3 every 5 minutes. 
+
+ANS:A
+
+95.You have recently joined a startup company building sensors to measure street noise and air quality in urban areas.The company has been running a pilot deployment of around 100 sensors for 3 months each sensor uploads 1KB of sensor data every minute to a backend hosted on AWS.During the pilot,you measured a peak or 10 IOPS on the database,and you stored an average of 3GB of sensor data per month in the database .The current deployment consists of a load-balanced auto scaled Ingestion layer using EC2 instances and a PostgreSQL RDS database with SOOGB standard storage .The pilot is considered a success and your CEO has managed to get the attention or some potential investors .The business plan requires a deployment of at least 100K sensors which needs to be supported by the bac kend.You also need to store sensor data for at least two years to be able to compare year over year Improvements .
+To secure funding,you have to make sure that the platform meets these requirements and leaves roomfor further scaling. Which setupwin meet the requirements?
+A. Add an SOS queue to the ingestion layer to buffer writes to the RDS in.stance
+B. Ingest data into a DynamoDB table and move old data to a Redshift cluster
+C. Replace the RDS instance with a 6 node Redshift cluster with 96TB of .storage
+D. Keep the current architecture but upgrade RDS storage to 3TB and 10K provisioned IOPS
+
+ANS:B
+
+96.Which of the following instance types are available as Amazon EBS-backed only? Choose 2 answers
+A.  General purpose T2
+B. General purpose M3 
+C. Compute-optimized C4 
+D. Compute-optimized C3
+0 E. Storage-optimized 12
+
+ANS:A,C
+
+97.Which of the following statements are true about Amazom Route 53 resource records? Choose 2 answers
+A. An Alias record can map one ONS name to another Amazon Route 53 ONS name .
+B. A CNAME record can be created for your zone apex.
+C. An Amazon Route 53 CNAME record can point to any ONS record hosted anywhere.
+0. TTL can be set for an Alias record in Amazon RoUJte 53.
+E. An Amazon Route 53 Alias record can point to any DNS record hosted anywhere.
+
+ANS:A,C 
+
+98.Your company currently has a 2-tier web application running in an on-premises data center. You have experienced several infrastructure failures in the past two months resulting in significant financial losses .Your CIO is strongly agreeing to move the application to AWS.While working on achieving buy­ in fromthe other company executives,he asks you to develop a disaster recovery plan to help improve Business continuity in the short term. He specifies a target Recovery Time Objective (RTO) of 4 hours and a Recovery Point Objective (RPO) of 1 hour or less . He also asks you to implement the solution within 2 weeks.Your database is 200GB in size and you have a 20Mbps Internet connection. How would you do this while minimizing costs?
+
+A  Create an EBS backed private AMI which includes a fresh install or your application. Setup a script in your data center to backup the local database every 1 hour and to encrypt and copy the resulting file to an S3 bucket using multi-part upload.
+B. Install your application on a compute-optimized EC2 instance capable of supporting the application's average load synchronously replicate transactions from your on-premises database to a database instance in AWS across a secure Direct Connect connection.
+C. Deploy your application on EC2 instances within an Auto Scaling group across multiple availability zones asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+D. Create an EBS backed private AMI that includes a fresh install of your application. Develop a Cloud Formation template which includes your Mil and the required EC2.Auto-Scaling and ELS resources to support d'eploying the application across Multiple-Ability Zones .Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+
+ANS:D
+
+99.You are responsible for a legacy web application whose seiver environment is approaching end of life You would like to migrate this application to AWS as quickly as possible,since the application environment currently has the fo'llowing limitations:
+The VM's single 1OGB VMDK is almost full
+Me virtual network interface still uses the 1OMbps driver,which leaves your 1QOMbps WAN connection completely underutilized It is currently running on a highly customized. Windows VM within a VMware environment :
+You do not have me installation media
+This is a mission critical application with an RTO (Recovery Time Objective) of 8 hours. RPO (Recovery Point Objective) of 1 hour. How could you best migrate this application to AWSwhile meeting your business continuity requirements?
+A. Use the EC2 VM Import Connector for vCenter to import the VM into EC2.
+B. Use Import/Export to import the VM as an ESS snapshot and attach to EC2.
+C. Use S3 to create a backup of the VM and restore the data into EC2.
+D. Use me ec2-bundle-instance API to Import an Image of the VM into EC2
+
+ANS:A
+	
+100.A customer needs corporate IT governance and cost oversight of all AWS resources consumed by its divisions.
+The divisions want to maintain administrative control of the discrete AWS resources they consume and keepthose resources separate fromthe resources of other divisions.
+Which of the following options,when used together will support the autonomy/control of divisions while enabling corporate IT to maintain governance and cost oversight? Choose 2 answers
+A. Use AWS Consolidated Billing and disable AWS root account access for the child accounts .
+B. Enable IAM cross-account access for all corporate IT administrators 1in each child account.
+C. Create separate VPCs for each division within the corporate IT AWS .account.
+D. Use AWS Consolidated Billing to link the divisions' accounts to a parent corporate account.
+E. Write all child AWS CloudTrail and Amazon CloudWatch logs to each child account's Amazon S3 'Log' bucket .
+
+ANS:B,D
+
+101.You have deployed a web application targeting a global audience across multiple AWS Regions under the domain name .example .com.You decide to use Route53 Latency-Based Routing to seive web requests to users fromthe region closest to the user. To provide business continuity in the event of seiver downtime you configure weighted record sets associated with two web seivers in separate Availability Zones per region. Dunning a DR test you notice that when you disable all web seivers in one of the regions Route53 does not automatically direct all users to the other region. What could be happening? (Choose 2 answers)
+0 A. Latency resource record sets cannot be used in combination with weighted resource record sets.
+0 B. You did not setup an http health check tor one or more of the weighted resource record sets associated with me disabled web seivers .
+0 C. The value of the weight associated with the latency alias resource record set in the region with the disabled seivers is higher than the weight for the other region.
+O D. One of the two working web seivers in the other region did not pass its HTIP health check.
+0 E. You did not set "Evaluate Target Health" to ''Yes" on the latency alias resource record set associated with example com in the region where you disabled the seivers .
+
+ANS:B,E
+
+102.Your company plans to host a large donation website on Amazon Web Services (AWS). You anticipate a large and undetermined amount of traffic that will create many database writes .To be certain that you do not drop any writes to a database hosted on AWS.Which service should you use?
+A Amazon RDS with provisioned IOPS upto the anticipated peak write throughput .
+B. Amazon Simple Queue Service (SOS) for capturing the writes and draining the queue to write to the database .
+C. Amazon ElastiCache to store the writes untilthe writes are committed to the database .
+D. Amazon DynamoDB with provisioned write throughput upto the anticipated peak write throughput .
+
+ANS:B
+
+103.A customer has a single 3-TB volume on-premises that is used to hold a large repository of images and print layout files.This repository is growing at 500 GB a year and must be presented as a single logical volume .The customer is becoming increasingly constrained with their local storage capacity and wants an off-site backup of this data,while maintaining low-latency access to their frequently accessed data.
+Which AWS Storage Gateway configuration meets the customer requirements?
+A. Gateway-Cached volumes with snapshots scheduled to Amazon S3
+B. Gateway-Stored volumes with snapshots scheduled to Amazon S3
+C. Gateway-Virtual Tape Library with snapshots to Amazon S3
+D. Gateway-Virtual Tape Library with snapshots to Amazon Glacier
+
+ANS:A
+
+104.Your company is in the process of developing a next generation pet collar that collects biometric information to assist families with promoting healthy lifestyles for their pets Each collar will push 30kb of biometric data In JSON format every 2 seconds to a collection platform that will process and analyze the data providing health trending information back to the pet owners and veterinarians via a web portal Management has tasked you to architect the collection platform ensuring the following requirements are met .
+Provide the ability for real-time analytics of the inbound biometric data Ensure processing of the biometric data is highly durable . Elastic and parallel The results of the analytic processing should be persisted for data mining Which architecture outlined below win meet the initial requirements for the collection platform?
+A. Utilize S3 to collect the inbound sensor data analyze the data from S3 with a daily scheduled Data Pipeline and save the results to a Redshift Cluster.
+B. Utilize Amazon Kinesis to collect the inbound sensor data,analyze the data with Kinesis clients and save the results to a Redshift cluster using EMR.
+C. Utilize SQS to collect the inbound sensor data analyze the data from SQS with Amazon Kinesis and save the results to a Microsoft SQL Seiver RDS instance.
+D. Utilize EMR to collect the inbound sensor data,analyze the data from EUR with Amazon Kinesis and save me results to DynamoDB.
+
+ANS:B
+
+105.A company has configured  and peered two VPCs:VPC-1 and VPC-2.VPC-1 contains only private  subnets,and VPC-2 contains only public subnets. The company uses a single AWS Direct Connect connection and private virtual interface to connect their on-premises network with VPC-
+1. Which two methods increases the fault tolerance of the connection to VPC-1? Choose 2 answers
+A.  Establish a hardware VPN over the internet between VPC-2 ana the on-premises network.
+B. Establish a hardware VPN over the internet between VPC-1 and the on-premises network.
+C. Establish a new AWS Direct Connect connection and private virtual interface in the same region as VPC-2.
+D. Establish a new AWS Direct Connect connection and private virtual interface in a different AWS region than VPC-1.
+E. Establish a new AWS Direct Connect connection and private virtual interface in the same AWS region as VPC-1
+
+ANS:B,E
+
+106.Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?
+A. Maintain two snapshots:the original snapshot and the latest incremental snapshot .
+B. Maintain a volume snapshot;subsequent snapshots will overwrite one another
+C. Maintain a single snapshot the latest snapshot is both Incremental and complete .
+D. Maintain the most current snapshot,archive the original and incremental to Amazon Glacier.
+
+ANS:C
+
+107.You need a persistent and durable storage to trace call activity of an IVR (Interactive Voice Response) system. Call duration is mostly in the 2-3 minutes timeframe . Each traced call can be either active or terminated.An external application needs to know each minute the list of currently active calls,which are usually a few calls/second. Put once per month there is a periodic peak upto 1000 calls/second for a few hours.The system is open 24/7 and any downtime should be avoided. Historical data is periodically archived to files. Cost saving is a priority for this project. What database implementation would better fit this scenario,keeping costs as low as possible?
+A  Use RDS Multi-AZ with two tables,one for -Active calls"' and one for -Terminated calls"'.In this way the " Active calls_ table is always small and effective to access .
+B. Use DynamoDB with a "'Calls"' table and a Global Secondary Index on a "'lsActive'"' attribute that is present for active calls only In this way the Global Secondary index is sparse and more effective.
+C. Use DynamoDB with a 'Calls"' table and a Global secondary index on a 'State"' attribute that can equal to "'active"' or "'terminated"' in this way the Global Secondary index can be used for all Items in the table .
+D. Use RDS Multi-AZ with a "'CALLS"' table and an Indexed "'STATE" field that can be equal to'ACTIVE"' or -TERMINATED"' In this way the SOL query Is optimized by the use of the Index.
+
+ANS:B
+
+108.Your startupwants to implement an order fulfillment process for selling a personalized gadget that needs an average of 3-4 days to produce with some orders taking upto 6 months you expect 10 orders per day on your first day.1000 orders per day after 6 months and 10,000 orders after 12 months . Orders coming in are checked for consistency men dispatched to your manufacturing plant for production quality control packaging shipment and payment processing If the product does not meet the quality standards at any stage of the process employees may force the process to repeat a step Customers are notified via email about order status and any critical issues with their orders such as payment failure.
+Your case architecture includes AWS Elastic Beanstalk for your website with an RDS MySQL instance for customer data and orders . How can you implement the order fulfillment process while making sure that the emails are delivered reliably?
+A. Add a business process management application to your Elastic Beanstalk app seivers and re- use the ROS database for tracking order status use one of the Elastic Beanstalk instances to send emails to customers.
+B. Use SWF with an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 Use the decider instance to send emails to customers.
+C. Use SWFwith an Auto Scaling group of activity workers and a decider instance in another Auto Scaling group with min/max=1 use SES to send emails to customers .
+D. Use an SQS queue to manage all process tasks Use an Auto Scaling group of EC2 Instances that poll the tasks and execute them. Use SES to send emails to customers.
+
+ANS:C
+
+
+109.What does specifying the mapping /dev/sdc=none when launching an instance do?
+A. Prevents /dev/sdc from creating the instance.
+B. Prevents /dev/sdc from deleting the instance.
+C. Set the value of /dev/sdc to'zero'.
+D. Prevents /dev/sdc from attachingto the instance.
+
+ANS:D
+
+110.Your company runs a customer facing event registration site This site is built with a 3-tier architecture with web and application tier seivers and a MySQL database The application requires 6 webtier seivers and 6 application tier seivers for normal operation,but can run on a minimum of 65% seiver capacity and a single MySQL database . When deploying this application in a region with three availability zones (AZs) which architecture provides high   availability?
+A A webtier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELS (elastic load balancer),and an application tier deployed across 2 AZs with 3 EC2 instances in each AZ inside an Auto Scaling Group behind an ELS.and one RDS (Relational Database Service) instance deployed with read replicas in the other AZ.
+B. A webtier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each A2 inside an Auto Scaling Group behind an ELS (elastic load balancer) and an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an ELS and one RDS (Relational Database Service) Instance deployed with read replicas in the two other AZs .
+C. d A webtier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELS (elastic load balancer) and an application tier deployed across 2 AZs with 3 EC2 instances m each AZ inside an Auto Scaling Group behind an ELS and a Multi-AZ RDS (Relational Database Service) deployment.
+D. A webtier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ Inside an Auto Scaling Group behind an ELS (elastic load balancer).And an application tier deployed across 3 AZs with 2 EC2 instances In each AZ inside an Auto Scaling Group behind an ELS.And a Multi-AZ RDS (Relational Database services) deployment.
+
+ANS:D
+
+111.You've been brought in as solutions architect to assist an enterprise customer with their migration of an e-commerce platform to Amazon Virtual Private Cloud (VPC) The previous architect has already deployed a 3-tier VPC.
+The configuration is as follows:
+VPC vpc-2f8t>C447 IGVV iq-2d8bc445 NACL acl-2080c448
+Subnets and Route Tables: Web server 's subnet-258Dc 44d
+Application server 's suDnet-248bc44c Database server 's subnet-9189c6f9 Route Tables:
+rrb-218DC449
+rtb-238bc44b
+Associations:
+subnet-258bc44d: rtb-2i8bc449 Subnet-248DC44C rtb-238tX44b subnet-9189c6f9 rtb-238Dc 44b
+You are now ready to begin deploying EC2 instances into the VPC Web servers must have direct access to the internet Application and database seivers cannot have direct access to the internet . Which configuration below will allow you the ability to remotely administer your application and database seivers,as well as allow these seivers to retrieve updates fromthe Internet?
+A. Create a bastion and NAT Instance in subnet-248bc44c and add a route from rtb-238bc44b to subnet-258bc44d.
+B. Add a route from rtD-238bc440 to igw-2d8bc445 and add a bastion and NAT instance within suonet-248bc44c .
+C. Create a bastion and MAT Instance In subnet-258bc44d.Add a route from rtb-238bc44b to igw- 2d8bc445 .And a new NACL that allows access between subnet-258bc44d and subnet-248bc44c.
+D. Create a bastion and mat instance in su0net-258Dc44d and add a route from rtD-238Dc440 to the mat instance.
+
+ANS:D
+
+112.You are implementing AWS Direct Connect. You intend to use AWS public service end points such as Amazon S3,across the AWS Direct Connect link.You want other Internet traffic to use your existing link to an Internet Service Provider.
+What is the correct way to configure AWS Direct connect for access to services such as Amazon S3?
+A Configure a public Interface on your AWS Direct Connect link Configure a static route via your AWS Direct Connect link that points to Amazon S3 Advertise a default route to AWS using BGP.
+B. Create a private interface on your AWS Direct Connect link. Configure a static route via your AWS Direct connect link that points to Amazon S3 Configure specific routes to your network in your VPC.
+C. Create a public interface on your AWS Direct Connect link Redistribute·BGP routes into your existing routing infrastructure advertise specific routes for your network to AWS.
+D. Create a private interface on your AWS Direct connect link. Redistribute BGP routes into your existing routing infrastructure and advertise a default route to AWS.
+
+ANS:C
+
+113.You have been asked to design the storage layer for an application.The application requires disk performance of at least 100,000 IOPS in addition,the storage layer must be able to survive the loss of an individual disk. EC2 instance,or Availability Zone without any data loss .The volume you provide must have a capacity of at least 3 TB.Which of the following designs will meet these objectives'?
+A  Instantiate an 12 8xlarge instance in us-east-1a Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instance Provision 3x1TB EBS volumes attach themto the instance and configure them as a second RAID 0 volume Configure synchronous,block-level replication fromthe ephemeral-backed volume to the EBS-backed volume .
+B. Instantiate an 12 8xlarge instance in us-east-1a create a raid 0 volume using the four 800GB SSD ephemeral disks provide with the Instance Configure synchronous block-level replication to an Identically configured Instance in us-east-1b.
+C. Instantiate a c3 8xlarge Instance In us-east-1 Provision an AWS Storage Gateway and configure it for 3 TB of storage and 100 000 IOPS Attach the volume to the instance.
+D. Instantiate a c3 8xlarge instance in us-east-i provision 4x1TB EBS volumes,attach themto the instance,and configure them as a single RAID 5 volume Ensure that EBS snapshots are performed every 15 minutes .
+E. Instantiate a c3 8xlarge Instance in us-east-1 Provision 3x1TB EBS volwmes attach themto the instance,and configure them as a single RAID 0 volume Ensure that EBS snapshots are performed every 15 minutes .
+
+ANS:B
+
+114.A customer has established an AWS Direct Connect connection to AWS.Tme link is up and routes are being advertised fromthe custome(s end, however the customer is unable to connect from EC2 instances inside its VPC to seivers residing in its datacenter. Which of the following options provide a viable solution to remedy this situation? (Choose 2 answers)
+A  Add a route to the route table with an iPsec VPN connection as the target .
+B. Enable route propagation to the virtual pinnate gateway 0fGW).
+C. Enable route propagation to the customer gateway (CGW).
+D. Modify the route table of all Instances using the 'route' command.
+E. Modify the Instances VPC subnet route table by adding a route back to the custome(s on- premises environment.
+
+ANS:B,E
+
+115.You try to connect via SSH to a newly created Amazon EC2 instance and get one of the following error messages: "Network error:Connection timed out" or "Error connecting to [instance), reason:-> Connection timed out: connect,"
+You have confirmed that the network and security group rules are configured correctly and the instance is passing status checks. What steps should you take to identify the source of the behavior? Choose 2 answers
+A. Verify that the private key file corresponds to the Amazon EC2 key pair assigned at launch .
+B. Verify that your IAM user policy has permission to launch Amazon EC2 instances .
+C. Verify that you are connecting with the appropriate user name for your AMI. IEI 
+D. Verify that the Amazon EC2 Instance was launched with the proper IAM role. IEI E. Verify that your federation trust to AWS has been established .
+
+ANS:A,C
+
+116.Which of the following services natively encrypts data at rest within an AWS region? Choose 2 answers
+A. AWS Storage Gateway
+B. Amazon DynamoDB 
+C. Amazon CloudFront 
+D. Amazon Glacier
+E. Amazon Simple Queue Service
+
+ANS:A,D
+
+117.A web design company currently runs several FTP seivers that their 250 customers use to upload and download large graphic files They wish to move this systemto AWS to make it more scalable,but they wish to maintain customer privacy and Keep costs to a minimum.
+What AWS architecture would you recommend?
+A ASK their customers to use an S3 client instead of an FTP client. Create a single S3 bucket Create an IAM user for each customer Put the IAM Users in a Groupthat has an IAM policy that permits access to sub-directories within the bucket via use of the 'username' Policy variable .
+B. Create a single S3 bucket with Reduced Redundancy Storage turned on and ask their customers to use an S3 client instead of an FTP client Create a bucket for each customer with a Bucket Policy that permits access only to that one customer.
+C. Create an auto-scaling group of FTP seivers with a scaling policy to automatically scale-in when minimum network traffic on the auto-scaling group is below a given threshold. Load a central list of ftp users from 83 as part of the user Data startup script on each Instance.
+D. Create a single S3 bucket with Requester Pays turned on and ask their customers to use an S3 client instead of an FTP client Create a bucket tor each customer with a Bucket Policy that permits access only to that one customer.
+
+ANS:C
+
+118.You are tasked with moving a legacy application from a virtual machine runming Inside your datacenter to an Amazon VPC Unfortunately this app requires access to a number of on- premises services and no one who configured the app still works for your company.Even worse there's no documentation for
+it . What will allow the application running inside the VPC to reach back and access its internal dependencies without being reconfigured? (Choose 3 answers)
+A An AWS Direct Connect link between the VPC and the network housing the internal services .
+B. An Internet Gateway to allow a VPN connection.
+C. An Elastic IP address on the VPC instance
+D. An IP address space that does not conflict with the one on-premises
+E. Entries in Amazon Route 53 that allow the Instance to resolve its de pendencies' IP addresses
+F. A VM Import of the current virtual machine
+
+ANS:A,D,F
+
+119.A 3-tier e-commerce web application is current deployed on-premises and will be migrated to AWS for greater scalability and elasticity The web seiver currently shares read-only data using a network distributed file system The app seiver tier uses a clustering mechanism for discovery and shared session state that depends on IP multicast The database tier uses shared-storage clustering to provide database fall over capability,and uses several read slaves for scaling Data on all seivers and the distributed file system directory is backed upweekly to off-site tapes Which AWS storage and database architecture meets the requirements of the application?
+A  Web seivers,store read-only data in S3,and copy from S3 to root volume at boot time App seivers snare state using a combination orDynamoDB and IP unicast Database use RDS with multi-AZ deployment and one or more Read Replicas Backup web and app seivers backed up weekly via Mils database backed upvia DB snapshots .
+B. Web seivers store -read-only data in S3,and copy from S3 to root volume at boot time App seivers share state using a combination of DynamoDB and IP unicast Database,use RDS with multi-AZ deployment and one or more read replicas Backup web seivers app seivers,and database backed upweekly to Glacier using snapshots .
+C. Web seivers store read-only data In S3 and copy from S3 to root volume at boot time App seivers share state using a combination of DynamoDB and IP unicast Database use RDS with multi-AZ deployment Backup web and app seivers backed upweekly via AM is . Database backed upvia DB snapshots
+D. Web seivers,store read-only data in an EC2 NFS seiver,mount to e.ach web seiver at boot time App seivers share state using a combination of DynamoDB and IP multicast Database use RDS with multi-AZ deployment and one or more Read Replicas Backup web and app seivers backed upweekly via Mils database backed upvia DB snapshots
+
+ANS:A
+
+120.A customer has a 10 GB AWS Direct Connect connection to an AWS region where they have a web application hosted on Amazon Elastic Computer Cloud (EC2). The application has dependencies on an on-premises mainframe database that uses a BASE (Basic Available . Sort stale Eventual consistency) rather than an ACID (Atomicity.Consistency isolation. Durability) consistency model. The application is exhibiting undesirable behavior because the database is not able to handle the volume of writes . How can you reduce the load on your on-premises database resources in the most cost-effective way?
+A Use an Amazon Elastic Map Reduce (EMR) S3DistCp as a synchronization mechanism between the on-premises database and a Hadoop cluster on AWS.
+B. Modify the application to write to an Amazon SQS queue and develop a worker process to flush the queue to the on-premises database .
+C. Modify the application to use DynamoDB to feed an EMR cluster which uses a map function to write to the on-premises database .
+D. Provision an RDS read-replica database on AWS to handle the writes and synchronize the two databases using Data Pipeline.
+
+ANS:B
+
+121.Your company has HQ in Tokyo and branch offices all over the world and is using a logistics software with a multi-regional deployment on AWS in Japan, Europe and USA The logistic software has a 3-tier architecture and currently <uses MySQL 5.6 for data persistence . Each region has deployed its own database .
+In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by emailto all offices this batch process must be completed as fast as possible to quickly optimize·logistics how do you build the database architecture in order to meet the requirements?
+A  For each regional deployment,use RDS MySQL with a master in the region and a read replica in the HQ region
+B. For each regional deployment,use MySQL on EC2 with a master in the region and send hourly EBS snapshots to the HQ region
+C. For each regional deployment,use RDS MySQL with a master in the region and send hourly RDS snapshots to the HQ region
+D. For each regional deployment,use MySQL on EC2 with a master in the region and use S3 to copy data files hourly to the HQ region
+E. Use Direct Connect to connect all regional MySQL deployments to the HQ region and reduce network latency for the batch process
+
+ANS:A
+
+122.An International company has deployed a multi-tier web application that relies on DynamoDB in a single region For regulatory reasons they need disaster recovery capability In a separate region with a Recovery Time Objective of 2 hours and a Recovery Point Objective of 24 hours They should synchronize their data on a regular basis and be able to provision me web application rapidly using CloudFormation.The objective is to minimize changes to the existing web application,control the throughput of DynamoDB used for the synchronization of data and synchronize only the modified elements . Which design would you choose to meet these requirements?
+A Use AWS data Pipeline to schedule a DynamoDB cross region copy once a day.create a Lastupdated' attribute in your DynamoDB table that would represent the timestamp of the last update and use it as a filter.
+B. Use EMR and write a custom script to retrieve data from DynamoDB in the current region using a SCAN operation and push it to QynamoDB in the second region.
+C. Use AWS data Pipeline to schedule an export of the DynamoDB table to S3 in the current region once a day then schedule another task immediately after it that will import data from S3 to DynamoDB in the other region.
+D. Send also each Ante into an SQS queue in me second region;use an awto-scaiing group behind the SQS queue to replay the write in the second region.
+
+ANS:C
+
+123.An existing application stores sensitive information on a non-boot Amazon EBS data volume attached to an Amazon Elastic Compute Cloud instance. Which of the following approaches would protect the sensitive data on an Amazon EBSvolume?
+A.  Upload your customer keys to AWS CloudHSM.Associate the Amazon EBS volume with AWS CloudHSM.Re-mount the Amazon EBS volume.
+B. Create and mount a new, encrypted Amazon EBS volume . Move the data to the new volume .Delete the old Amazon EBS volume .
+C. Unmount the EBS volume.Toggle the encryption attribute to True.Re-mount the Amazon EBS volume.
+D. Snapshot the current Amazon EBS volume.Restore the snapshot to a new,encrypted Amazon EBS volume.Mount the Amazon EBS volume
+
+ANS:B
+
+124.Your company hosts a social media site supporting users in multiple countries.You have been asked to provide a highly available design tor the application that leverages multiple regions tor the most recently accessed content and latency sensitive portions of the wet) site The most latency sensitive component of the application involves reading user preferences to support web site personalization and ad selection.
+In addition to running your application in multiple regions,which option will support this application's requirements?
+A Seive user content from S3.CloudFront and use Route53 latency-based routing between ELBs in each region Retrieve user preferences from a local DynamoDB table in each region and leverage SQS to capture changes to user preferences with SOS workers for propagating updates to each table .
+B. Use the S3 Copy API to copy recently accessed content to multiple regions and seive user content from S3.CloudFront with dynamic content and an ELB in each region Retrieve user preferences from an ElasticCache cluster in each region and leverage SNS notifications to propagate user preference changes to a worker node in each region.
+C. Use the S3 Copy API to copy recently accessed content to multiple regions and seive user content from S3 CloudFront and Route53 latency­ based routing Between ELBs In each region Retrieve user preferences from a DynamoDB table and leverage SQS to capture changes to user preferences with SOS workers for propagating DynamoDB updates.
+D. Seive user content from S3.CloudFront with dynamic content,and an ELS in each region Retrieve user preferences from an ElastiCache cluster in each region and leverage Simple Workflow (SWF) to manage the propagation of user preferences from a centralized OB to each ElastiCache cluster.
+
+ANS:A
+
+125.Which of the following are use cases for Amazon DynamoDB? Choose 3 answers
+A  Storing BLOB data.
+B. Managing web sessions.
+C. Storing JSON documents.
+D. Storing metadata for Amazon SJ objects.
+E. Running relational joins and complex updates.
+F. Storinglarge amounts ofinfrequently accessed data.
+
+ANS:B,C,D
+
+126.You have launched an EC2 instance with four (4) 500 GB EBS Provisioned IOPS volumes attached The EC2 Instance Is EBS-Optimized and supports 500 Mbps throughput between EC2 and EBSThe two EBSvolumes are configured as a single RAID o device,and each Provisioned IOPS volume is provisioned with 4.000 IOPS (4 000 16KB reads or writes) for a total of 16.000 random IOPS on the instance The EC2 Instance initially delivers the expected 16 000 IOPS random read and write performance Sometime later in order to increase the total random 1/0 performance of the instance,you ac an additional two 500 GB EBS Provisioned IOPS volumes to the RAID Eac!h volume Is provisioned to 4.000 IOPs like the original four for a total of 24.00 IOPS on the EC2 instance Monitoring shows that the EC2 instance CPU utilization increased from 50% to 70%. but the total random IOPS measured a the instance level does not increase at all.
+What is the problem and a valid solution?
+A  Larger storage volumes support higher Provisioned IOPS rates:increase the provisioned volume storage of each of the 6 EBSvolumes to 1TB.
+B. The EBS-Optimized throughput limits the total IOPS that can be utilized use an EBS-Optimized instance that provides larger throughput .
+C. Small block sizes cause performance degradation,limiting the l'O throughput,configure the instance device driver and file systemto use 64KB blocks to increase throughput .
+D. RAID 0 only scales linearly to about 4 devices,use RAID 0 with 4 EBS Provisioned IOPS volumes but increase each Provisioned IOPS EBS volume to 6.000 IOPS.
+E. The standard EBS instance root volume limits the total IOPS rate,change the instant root volume to also be a 500GB 4.000 Provisioned IOPS volume .
+
+ANS:E
+
+127.A t2.medium EC2 instance type must be launched with what type of Amazon Machine Image (AMI)?
+A An Instance store Hardware Virtual Machine AMI
+B. An Instance store Paravirtual AMI
+C. An Amazon EBS-backed Hardware Virtual Machine AMI
+D. An Amazon EBS-backed Paravirtual AMI
+
+ANS:C
+
+128.A company has an AWS account that contains three VPCs (Dev,Test ,and Prod) in the same region.Test is peered to both Prod and Dev.All VPCs  have non-overlapping CIDR blocks .The company wants to push minor code releases from Dev to Prod to speed uptime to market . Which of the following options helps the company accomplish this?
+A. Create a new peering connection Between Prod and Dev along with appropriate routes.
+B. Create a new entry to Prod in the Dev route table using the peering connection as the target .
+C. Attach a second gateway to Dev.Add a new entry in the Prod route table identifying the gateway as the target .
+D. The VPCs have non-overlapping CIDR blocks in the same account .The route tables contain local routes for all VPCs.
+
+ANS:A	
+
+
+129.Refer to the architecture diagram above of a batch processing solution using Simple Queue Service (SOS) to set up a message queue between EC2 instances which are used as batch processors Cloud Watch monitors the number of Job requests (queued messages) and an Auto Scaling group adds or deletes batch seivers automatically based on parameters set in Cloud Watcm alarms .You can use this architecture to implement which of the following features in a cost effective and efficient manner?
+11.
+CloudWatdl
+(c)Message store<! Il	@Check
+in queue	threshold
+
+
+
+
+
+
+
+EC2
+
+
+IJJ
+Putmessage
+
+I I I
+
+sos
+I
+
+Au1osca11ng
+    GAddEC2
+
+
+
+
+
+EC2
+
+Get message to process
+
+EC2
+A. Reduce the overall lime for executing jobs through parallel processing by allowing a busy EC2 instance that receives a message to pass it to the next instance in a daisy-chain setup.
+B. Implement fault tolerance against EC2 instance failure since messages would remain in SQS and worn can continue with recovery of EC2 instances implement fault tolerance against SQS failure by backing up messages to S3.
+C. Implement message passing between EC2 instances within a batch by exchanging messages through SOS.
+D. Coordinate number of EC2 instances with number of job requests automatically thus Improving cost effectiveness .
+E. Handle high priority jobs before lower priority jobs by assigning a priority metadata field to SQS messages.
+
+
+ANS: D
+
+130.You have a load balancer configured for VPC,and all back-end Amazon E<C2 instances are in service . However,your web browser times out when connecting to the load balance(s DNS name . Which options are probable causes of this behavior? Choose 2 answers
+A. The load balancer was not configured to use a public subnet with an Internet gateway configured
+B. The Amazon EC2 instances do not have a dynamically allocated private IP address
+C. The security groups or network ACLs are not property configured for webtraffic .
+D. The load balancer is not configured in a private subnet with a NAT instance.
+E. The VPC does not have a VGW configured.
+
+ANS:A,C 
+
+131.Which of the following are true regarding encrypted Amazon Elastic Block Store (EBS) volumes? Choose 2 answers
+A. Supported on all Amazon EBS volume types
+B. Snapshots are automatically encrypted
+C. Available to all instance types
+0. Existing volumes can be encrypted
+E. shared volumes can be encrypted
+
+ANS:A,B
+
+132.An Auto-Scaling group spans 3 Af.s and currently has 4 running EC2 instances. When Auto Scaling needs to terminate an EC2 instance by default,AutoScaling will: Choose 2 answers
+A. Allow at least five minutes for Windows/Linux shutdown scripts to c•omplete,before terminating the instance.
+B. Terminate the instance with the least active network connections.If multiple instances meet this criterion,one will be randomly selected.
+C. Send an SNS notification, if configured to do so.
+D. Terminate an instance in the Af which currently has 2 running EC2 instances .
+E. Randomly select one of the 3 Af.s,and then terminate an instance in that Af..
+
+ANS:C,D 
+
+133.Your application is using an ELS in front of an Auto Scaling group of web/application seivers deployed across two Af.s and a Multi-AZ. RDS Instance for data persistence .The database CPU is often above 80% usage and 90% of 1/0 operations on the database are reads.To improve performance you recently added a single-node Memcached ElastiCache Cluster to cache frequent DB query results. In the next weeks the overall workload is expected to grow by 30%. Do you need to change anything in the architecture to maintain the high availability or the application with the anticipated additional load.. Why?
+A. Yes.you should deploy two Memcached ElastiCache Clusters in different Af.s because the ROS Instance will not Be able to handle the load It me cache node fails.
+B. No. if the cache node fails the automated ElastiCache node recovery feature will prevent any availability impact.
+C. Yes you should deploy the Memcached ElastiCache Cluster with two nodes in the same Af. as the RDS DB master instance to handle the load if one cache node fails.
+D. No if the cache node fails you can always get the same data from the DB without having any availability impact .
+
+ANS:B
+
+134.You are running a successful multitier web application on AWS and your marketing department has asked you to add a reporting tier to the application. The reporting tier will aggregate and publish status reports every 30 minutes from user-generated information that is being stored in your web application s database .You are currently running a Multi-AZ RDS MySQL instance for the database tier. You also have implemented Elasticache as a database
+caching layer between the application tier and database tier. Please select the answer that will allow you to successfully implement the reporting tier with as little impact as possible to your database .
+A Continually send transaction logs from your master database to an S3 bucket and generate the reports off the S3 bucket using S3 byte range requests .
+B. Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ.
+C. Launch a RDS Read Replica connected to your Multi AZ master database and generate reports by querying the Read Replica .
+D. Generate the reports by querying the ElastiCache database caching t1ier.
+
+ANS:C
+
+135.You are designing a multi-platform web application for AWS The application will run on EC2 instances and will be accessed from PCs .tablets and smart phones Supported accessing platforms are Windows . MACOS.IOS and Android Separate sticky session and SSL certificate setups are required for different platform types which of the following describes the most cost effective and performance efficient architecture setup?
+A.   Setup a hybrid architecture to handle session state and SSL certificates on-prem and separate EC2 Instance groups running web applications for different  platform types running in a VPC.
+B. Set up one ELB for all platforms to distribute load among multiple instance under it Each EC2 instance implements ailfunctionality for a particular platform .
+C. Set up two ELBs The first ELB handles SSL certificates for all platforms and the second ELB handles session stickiness for all platforms for each ELB run separate EC2 instance groups to handle the web application for each platform .
+D. Assign multiple ELBS to an EC2 instance or group of EC2 instances runningthe common components of the web application, one ELB for each platform type Session stickiness and SSL termination are done at the ELBs.
+
+ANS:D 
+
+136.You are the new IT architect in a company that operates a mobile sleeptracking application When activated at night,the mobile app is sending collected data points of 1 kilobyte every 5 minutes to your backend
+The backend takes care of authenticating the user and writing the data points into an Amazon DynamoDB table .
+Every morning,you scan the table to extract and aggregate last night's data on a per user basis,and store the results in Amazon S3.
+Users are notified via Amazon SMS mobile push notifications that new data is available,which is parsed and visualized by (The mobile app Currently you have around 100k users who are mostly based out of North America .
+You have been tasked to optimize the architecture of the backend systemto lower cost what would you recommend? (Choose 2 answers)
+A.  Create a new Amazon DynamoDB (able each day and drop the one for the previous day after its data is on Amazon S3.
+B. Have the mobile app access Amazon DynamoDB directly instead of JSON files stored on Amazon S3.
+C. Introduce an Amazon SQS queue to buffer writes to the Amazon DynamoDB table and reduce provisioned write throughput . 
+D. Introduce Amazon Elasticache lo cache reads fromthe Amazon DynamoDB table and reduce provisioned read throughput . 
+E. Write data directly into an Amazon Redshift cluster replacing both Amazon DynamoDB and Amazon S3.
+
+ANS:C,D 
+
+137.Your company has an on-premises multi-tier PHP web application,which recently experienced downtime due to a large burst In webtraffic due to a company announcement Over the coming days,you are expecting similar announcements to drive similar unpredictable bursts,and are looking to find ways to quickly improve your infrastructures ability to handle unexpected increases in traffic .The application currently consists of 2 tiers a webtier which consists of a load balancer and several Linux Apache web seivers as well as a database tier which hosts a Linux seiver hosting a MySQL database .
+Which scenario below will provide full site functionality,while helping to improve the ability of your application in the short timeframe required?
+A Offload traffic from on-premises environment Setup a CloudFront distribution and configure CloudFront to cache objects from a custom origin Choose to customize your object cache behavior,and select a TIL that objects should exist in cache.
+B. Migrate to AWS Use VM import 'Export to quickly convert an on-premises web seiver to an AMIcreate an Auto Scaling group,which uses the imported AMIto scale the webtier based on incoming traffic Create an RDS read replica and setup replication between the RDS instance and on­ premises MySQL seiver to migrate the database .
+C. Failover environment : Create an S3 bucket and configure it tor website hosting Migrate your DNS to Route53 using zone (lie import and leverage Route53 DNS failover to failover to the S3 hosted website .
+D. Hybrid environment Create an AMIwhich can be used of launch web serfers in EC2 Create an Auto Scaling groupwhich uses the •AMIto scale the webtier based on incoming traffic Leverage Elastic Load Balancing to balance traffic between on-premises web seivers and those hosted in AWS.
+
+ANS:A
+
+138.You have a periodic Image analysis application that gets some files In Input analyzes them and tor each file writes some data in output to a ten file the number of files in input per day is high and concentrated in a few hours of the day.
+Currently you have a seiver on EC2 with a large EBSvolume that hosts the input data and the results it takes almost 20 hours per day to complete the process What services could be used to reduce the elaboration time and improve the availability of the solution?
+A S3 to store 1/0 files. SQS to distribute elaboration commands to a group of hosts working in parallel. Auto scaling to dynamically size the group of hosts depending on the length of the SQS queue
+B. EBSwith Provisioned IOPS (PIOPS) to store 1/0 files. SNS to distribute elaboration commands to a group of hosts working in parallel Auto Scaling to dynamically size the group of hosts depending on the number of SNS notifications
+C. S3 to store 1/0 files,SNS to distribute evaporation commands to a group of hosts working in parallel. Auto scaling to dynamically size the group of hosts depending on the number of SNS notifications
+D. EBSwith Provisioned IOPS (PIOPS) to store 1/0 files SOS to distribute elaboration commands to a group of hosts working in parallel Auto Scaling to dynamically size the group ct hosts depending on the length of the SQS queue .
+
+ANS:D	
+
+139.A web-startup runs its very successful social news application on Amazon EC2 with an Elastic Load Balancer,an Auto-Scaling group of Java/Tomcat application-seivers,and DynamoDB as data store.The main web-application best runs on m2 x large instances since it is highly memory- bound Each new deployment requires semi-automated creation and testing of a new AMI for the application seivers which takes quite a while ana is therefore only done once per week. Recently,a new chat feature has been implemented in nodejs and wails to be integrated in the architecture . First tests show that the new component is CPU bound Because the company has some experience with using Chef,they decided to streamline the deployment process and use AWS Ops Works as an application life cycle tool to simplify managememt of the application and reduce the deployment cycles.
+What configuration in AWS Ops Works is necessary to integrate the new chat module in the most cost-efficient and flexible way?
+A  Create one AWS Ops Works stack,create one AWS Ops Works layer,create one custom recipe
+B. Create one AWS Ops Works stack create two AWS Ops Works Iaye rs create one custom recipe
+C. Create two AWS Ops Works stacks create two AWS Ops Works layers create one custom recipe
+D. Create two AWS Ops Works stacks create two AWS Ops Works layers create two custom recipe
+
+ANS:C
+
+140.An enterprise wants to use a third-party Saas application.The Saas application needs to have access to issue several API commands to discover Amazon EC2 resources running within the enterprise's account The enterprise has internal security policies that require any outside access to their environment must conformto the principles of least privilege and there must be controls in place to ensure that the credentials used by the Saas vendor cannot be used by any other third party.Which of the following would meet all of these conditions?
+A  From the AWS Management Console,navigate to the Security Credentials page and retrieve the access and secret key for your account.
+B. Create an IAM user within the enterprise account assign a user policy to the IAM user that allows only the actions required by the Saas application create a new access and secret key for the user and provide these credentials to the Saas provider.
+C. Create an IAM role for cross-account access allows the Saas provider's account to assume the role and assign it a policy that allows only the actions required by the Saas application.
+D. Create an IAM role for EC2 instances,assign it a policy mat allows only the actions required tor the Saas application to work,provide the role ARM to the Saas provider to use when launching their application instances .
+
+ANS: C
+
+141.A newspaper organization has a on-premises application which allows the public to search its back catalogue and retrieve individual newspaper pages via a website written in Java They have scanned the old newspapers into JPEGs (approx 17TB) and used Optical Character Recognition (OCR) to populate a commercial search product. The hosting platform and software are now end of life and the organization wants to migrate Its archive to AWS and produce   a cost efficient architecture and still be designed for availability and durability Which is the most appropriate?
+A Use S3 with reduced redundancy lo store and seive the scanned files,install the commercial search application on EC2 Instances and configure with auto-scaling and an Elastic Load Balancer.
+B. Model the environment using CloudFormation use an EC2 instance running Apache webseiver and an open source search application,stripe multiple standard EBS volumes together to store the JPEGs and search index.
+C. Use S3 with standard redundancy to store and seive the scanned files, use CloudSearch for query processing,and use Elastic Beanstalk to host the website across multiple availability zones .
+D. Use a single-AZ RDS MySQL instance lo store the search index 33d the JPEG images use an EC2 instance to seive the website and translate user queries into SQL.
+E. Use a CloudFront download distribution to seive the JPEGs to the end users and Install the current commercial search product,along with a Java Container Tor the website on EC2 instances and use Route53 with DNS round-robin.
+
+ANS:C
+
+142.You currently operate a web application In the AWS US-East region.
+The application runs on an auto-scaled layer of EC2 instances and an RDS Multi-AZ database .
+Your IT security compliance officer has tasked you to develop a reliable and durable logging solution to track changes made to your EC2.IAM And RDS resources .The solution must ensure the integrity and confidentiality of your log data.
+Which of these solutions would you recommend?
+A  Create a new CloudTrailtrailwith one new S3 bucket to store the logs and with the global services option selected Use IAM roles S3 bucket policies and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs .
+B. Create a new CloudTrailwith one new S3 bucket to store the logs Configure SNS to send log file delivery notifications to your management system Use IAM roles and S3 bucket policies on the S3 bucket mat st•ores your logs .
+C. Create a new CloudTrailtrailwith an existing S3 bucket to store the logs and with the global services option selected Use S3 ACLs and Multi Factor Authentication (MFA) Delete on the S3 bucket that stores your logs.
+D. Create three new CloudTrailtrails with three new S3 buckets to store the logs one for the AWS Management console,one for AWS SDKs and one for command line tools Use IAM roles and S3 bucket policies on the S3 buckets that store your logs .
+
+ANS:A
+
+143.When you view the block device mapping for your instance,you can see only the EBS volumes,not the instance store volumes .
+A. Depends on the instance type
+B. FALSE
+C. Depends on whether you use API call
+D. TRUE
+
+ANS:D
+
+144.You are designing a photo sharing mobile app the application will store all pictures in a single Amazon S3 bucket.
+Users will upload pictures fromtheir mobile device directly to Amazon S3 and wiII be able to view and download their own pictures directly from Amazon S3.You want to configure security to handle potentially millions of users in the most secure manner possible . What should your seiver-side application
+do when a new user registers on the photo- sharing mobile application?	er
+A. Create a set of long-term credentials using AWS Security Token Service with appropriate permissions Store these credentials in the mobile app and use themto access Amazon S3.
+B. Record the use(s Information in Amazon RDS and create a role in IAM with appropriate permissions. When the user uses their mobile app create temporary credentials using the AWS Security Token Service'AssumeRole'function Store these	er credentials in the mobile app's memory and use themto access Amazon S3 Generate new credentials the next time the user runs the mobile app.
+C. Record the use(s Information In Amazon DynamoDB.When the user uses their mobile app create temporary credentials using AWS Security Token Service with appropriate permissions Store these credentials in the mobile app's memory and use themto access Amazon S3 Generate new credentials the next time the user runs the mobile app.
+D. Create IAM user. Assign appropriate permissions to the IAM user Generate an access key and secret key for the IAM user,store them in the mobile app and use these credentials to access Amazon S3.
+E. Create an IAM user. Update the bucket policy with appropriate permissions for the IAM user Generate an access Key and secret Key for the IAM user,store them In the mobile app and use these credentials to access Amazon S3.
+
+ANS:B
+
+
+145.A large real-estate brokerage is exploring the option o( adding a cost-effective location based alert to their existing mobile application The application backend infrastructure currently runs on AWS Users who opt in to this service·will receive alerts on their mobile device regarding real- estate otters in proximity to their location. For the alerts to be relevant delivery time needs to be in the low minute count the existing mobile app has 5 million users across the us Which one of the following architectural suggestions would you make to the customer?
+A The mobile application will submit its location to a web service endpoint utilizing Elastic Load Balancing and EC2 instances:DynamoDB will be used to store and retrieve relevant otters EC2 instances will communic.ate with mobile earners/device providers to push alerts back to mobile application.
+B. Use AWS DirectConnect or VPN to establish connectivity with mobile carriers EC2 instances will receive the mobile applications ·location through carrier connection: ROS will be used to store and relevant relevant offers EC2 instances will communicate with mobile carriers to push alerts back to the mobile application
+C. The mobile application will send device location using SQS.EC2 instances will retrieve the relevant others from DynamoDB AWS Mobile Push will be used to send offers to the mobile application
+D. The mobile application will send device location using AWS Mobile Push EC2 instances will retrieve the relevant offers from DynamoDB EC2 instances will communicate with mobile carriers/device providers to push alerts back to the mobile application.
+
+ANS:C
+
+146.You are looking to migrate your Development (Dev) and Test environments to AWS.You have decided to use separate AWS accounts to host each environment. You plan to link each accounts bill to a Master AWS account using Consolidated Billing.To make sure you Keepwithin budget you would like to implement a way for administrators in the Master account to have access to stop,delete and/or terminate resources in both the Dev and Test accounts . Identify which option will allow you to achieve this goal.
+A  Create IAM users in the Master account with full Admin permissions . Create cross-account roles in the Dev and Test accounts that grant the Master account access to the resources in the account by inheriting permissions fromthe Master account .
+B. Create IAM users and a cross-account role in the Master account that grants full Admin permissions to the Dev and Test accounts .
+C. Create IAM users in the Master account Create cross-account roles in the Dev and Test accounts that have full Admin permissions and grant the Master account access .
+D. Link the accounts using Consolidated Billing.This will give IAM users in the Master account access to resources in the Dev and Test accounts
+
+ANS:C
+
+147.You are migrating a legacy client-seiver application to AWS The application responds to a specific DNS domain (e g www example com) and has a 2-tier architecture ,with multiple application seivers and a database seiver Remote clients use TCP to connect to the application seivers .The application seivers need to know the IP address of the clients in order to function properly and are currently taking that information fromthe TCP socket A Multi-AZ RDS MySQL instance will be used for the database . During the migration you can change the application code but you have to file a change request .
+How would you implement the architecture on AWS In order to maximize scalability and high ability?
+A  File a change request to implement Proxy Protocol support In the application Use an EL8 with a TCP Listener and Proxy Protocol enabled to distribute load on two application seivers in different AZs .
+B. File a change request to Implement Cross-Zone support in the applicat1ion Use an EL8 with a TCP Listener and Cross-Zone Load Balancing enabled,two application seivers in different AZs .
+C. File a change request to implement Latency Based Routing support in the application Use Route 53 with Latency Based Routing enabled to distribute load on two application seivers in different AZs .
+D. File a change request to implement Alias Resource support in the application Use Route 53 Alias Resource Record to distribute load on two application seivers in different AZs .
+
+ANS:A
+
+148.Your website is serving on-demand training videos to your workforce .Videos are uploaded monthly in high resolution MP4 format. Your workforce is distributed globally often on the move and using company-provided tablets that require the HTIP Live Streaming (HLS) protocol to watch a video.Your company has no video transcoding expertise and it required you may need to pay for a consultant. How do you implement the most cost-efficient architecture without compromising high availability and quality of video delivery'?
+A  Elastic Transcoder to transcode original high-resolution MP4 videos to HLS S3 to host videos with Utecycle Management to archive original flies to Glacier after a few days CloudFront to seive HLS transcoded videos from S3
+B. A video transcoding pipeline running on EC2 using SQS to distribute tasks and Auto Scaling to adjust the number or nodes depending on the length of the queue S3 to host videos with Lifecycle Management to archive all files to Glacier after a few days CloudFront to seive HLS transcoding videos from Glacier
+C. Elastic Transcoder to transcode original nigh-resolution MP4 videos to HLS EBS volumes to host videos and EBS snapshots to incrementally backup original rues after a few days CloudFront to seive HLS transcoded videos from EC2.
+D. A video transcoding pipeline running on EC2 using SOS to distribute tasks and Auto Scaling to adjust the number of nodes depending on the length of the queue E8S volumes to host videos and EBS snapshots  o incrementally backup original files after a few days CloudFront to seive HLS transcoded videos from EC2
+
+ANS:A
+
+149.A corporate web application is deployed within an Amazon Virtual Private Cloud (VPC) and is connected to the corporate data center via an iPsec VPN.	Ty
+The application must authenticate against the on-premises LDAP server. After authentication,each logged-in user can only access an Amazon Simple
+Storage Space (SJ) keyspace specific to that user. Which two approaches can satisfy these objectives? (Choose 2 answers)	Be
+Be
+A.  Develop an identity broker that authenticates against IAM security Token servic·e to assume a IAM role in order to get temporary AWS security	Wi
+credentials The application calls the identity broker to get AWS temporary security credentials with access to the appropriate SJ bucket.
+B. The application authenticates against LOAP and retrieves the name of an IAMrole associated with the user.The application then calls the IAM	Ad
+Security Token Service to assume that IAM role The appication can use the temporary credentials to access the appropriate SJ bucket.	Wi
+C. Develop anidentity broker that authenticates against LDAP and then calls IAM Security Token Service to get IAM federated user credentials The	Wi
+applcation calls theidentity broker to get IAM federated user credentials with access to the appropriate SJ bucket.	Wi
+D. The appl cation authenticates against LDAP the appl cation then calls the AWSidentity and Access Management (IAM) Security seNice tologin
+
+ANS:C,D
+
+150.You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions on the Internet for product updates.The depots and distributions are accessible via third party CONs by their URLs.You want to explicitly deny any other outbound connections from your VPC instances to hosts on the·internet .
+Which of the following options would you consider?
+A  Configure a web proxy seiver in your VPC and enforce URL-based rules for outbound access Remove default routes.
+B. Implement security groups and configure outbound rules to only permit traffic to software depots .
+C. Move all your instances into private VPC subnets remove default routes from all routing tables and add specific routes to the software depots and distributions  only.
+D. Implement network access control lists to all specific destinations,with an Implicit deny as a rule.
+
+ANS:A
+
+151.You are designing a connectivity solution between on-premises infrastructure and Amazon VPC Your seive(s on-premises will De communicating with your VPC instances You will De establishing IPSec tunnels over the internet You will be using VPN gateways and terminating the IPsec tunnels on AWS-supported customer gateways.
+Which of the following objectives would you achieve by implementing an IPSec tunnel as outlined above? (Choose 4 answers)
+A End-to-end protection of data in transit
+B. End-to-end Identity authentication
+C. Data encryption across the Internet
+D. Protection of data in transit over the Internet
+E. Peer identity authentication between VPN gateway and customer gateway
+F. Data integrity protection across the Internet
+
+ANS:C,D,E,F
+
+152.A company is running a batch analysis every hour on their main transactional DB.running on an RDS MySQL instance to populate their central Data Warehouse running on Redshift During the execution of the batch their transactional applications are very slow When the batch completes they need to update the top management dashboard with the new data The dashboard is produced by another system running on-premises that is currently started when a manually-sent email notifies that an update is required The on-premises system cannot be modified because is managed by another team. How would you optimize this scenario to solve performance issues and automate the process as much as possible?
+A. Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises systemto update the dashboard
+B. Replace ROS with Redsnift for the oaten analysis and SQS to send ai message to the on- premises systemto update the dashboard
+C. Create an RDS Read Replica for the batch analysis and SNS to notify me on-premises systemto update the dashboard
+D. Create an RDS Read Replica for the batch analysis and SQS to sendla message to the on- premises systemto update the dashboard.
+
+ANS:C
+
+153.A company is building a voting systemfor a popular TV show,viewers win watch the performances then visit the show's website to vote for their favorite performer. It is expected that in a short period of time after the show has finished the site will receive millions of visitors .The visitors will first login to the site using their Amazon .com credentials and then submit their vote.After the votimg is completed the page will display the vote totals .The company needs to build the site such that can handle the rapid influx of traffic while maintaining good performance but also wants to keep costs to a minimum. Which of the design patterns below should they use?
+A  Use CloudFront and an Elastic Load balancer in front of an auto-scaled set of web seivers,the web seivers will first can the Login With Amazon service to authenticate the user then process the users vote and store the result into a multi-AZ Relational Database Service instance.
+B. Use CloudFront and the static website hosting feature of S3 with the Javascript SOK to call the Login With Amazon service to authenticate the user,use IAM Roles to gain permissions to a DynamoDB table to store the users vote.
+C. Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web seivers,the web seivers will first call the Login with Amazon service to authenticate the user,the web seivers will process the users vote and store the result into a DynamoDB table using IAM Roles for EC2 instances to gain permissions to the DynamoDB table .
+D. Use CloudFront and an Elastic Load Balancer in front of an auto-scaled set of web seivers,the web seivers will first call the Login. With Amazon service to authenticate the user,the web seivers win process the users vote and store the result into an SQS queue using IAM Roles for EC2 Instances to gain permissions to the SQS queue.A set of application seivers will then retrieve the items fromthe queue and store the result into a DynamoDB table .
+
+ANS:D
+
+154.You are designing an SSUTLS solution that requires HTIPS clients to be authenticated by the Web seiver using client certificate authentication.The solution must be resilient.
+Which of the following options would you consider for configuring the web seiver infrastructure? (Choose 2 answers)
+A. Configure ELB with TCP listeners on TCP/4d3.And place the Web seivers behind it .
+B. Configure your Web seivers with EIPS Place the Web seivers in a Route53 Record Set and configure health checks against all Web seivers.
+C. Configure ELB with HTIPS listeners , and place the Web seivers behind it.
+D. Configure your web seivers as the origins for a CloudFront distribution. Use custom SSL certificates on your CloudFront distribution.
+
+ANS:C,D
+
+155.A benefits enrollment company is hosting a 3-tier web application running in a VPC on AWS which includes a NAT (Network Address Translation) instance in the public Webtier. There is enough provisioned capacity for the expected workload tor the new fiscal year benefit enrollment period plus some extra overhead Enrollment proceeds nicely for two days and then the webtier becomes unresponsive,upon investigation using CloudWatch and other monitoring tools it is discovered that there is an extremely large and unanticipated amount of inbound traffic coming from a set of 15 specific IP addresses over port 80 from a country where the benefits company has no customers .The webtier instances are so overloaded that benefit enrollment administrators cannot even SSH into them. Which activity would be useful in defending against this attack?
+A. Create a custom route table associated with the web tier and block the .attacking IP addresses from the IGW (internet Gateway)
+B. Change the EIP (Elastic IP Address) of the NAT instance in the web tier subnet and update the Main Route Table with the new EIP
+C. Create 15 Security Group rules to block the attacking IP addresses over port 80
+D. Create an inbound NACL (Network Access control list) associated with he webtier subnet with deny rules to block the attacking IP addresses
+
+ANS:D
+
+156.An administrator is using Amazon CloudFormation to deploy a three tier web application that consists of a webtier and application tier that will utilize Amazon DynamoDB for storage when creating the CloudFormation template which of the following would allow the application instance access to the DynamoDB tables without exposing API credentials?
+A. Create an Identity and Access Management Role that has the required permissions to read and write from the required DynamoDB table and associate the Role to the application instances by referencing an instance profile.
+B. Use me Parameter section in the Cloud Formation template to nave trne user input Access and Secret Keys from an already created IAM user that has me permissions required to read and write from the required OynamoDB table.
+C. Create an Identity and Access Management Role that has the required permissions to read and write fromthe required DynamoDB table and reference the Role in the instance profile property of the application instance.
+D. Create an identity and Access Management user in the CloudFormation template that has permissions to read and write from the required DynamoDB table,use the GetAtt function to retrieve the Access and secret keys and pass them to the application instance through user-data.
+
+ANS:C
+
+157.You have an application running on an EC2 Instance which will allow users to download flies from a private S3 bucket using a pre-assigned URL. Before generating the URL the application should verify the existence of the file in S3.
+How should the application use AWS credentials to access the S3 bucket sec;urely?
+A  Use the AWS account access Keys the application retrieves the credentials fromthe source code of the application.
+B. Create a IAM user for the application with permissions that allow list ac-cess to the S3 bucket launch the instance as the IAM user and retrieve the IAM use(s credentials fromthe EC2 instance user data.
+C. Create an IAM role for EC2 that allows list access to objects in the S3 bucket. Launch the instance with the role,and retrieve the role's credentials fromthe EC2 Instance metadata
+D. Create an IAM user for the application with permissions that allow list access to the S3 bucket . The application retrieves the IAM user credentials from a temporary directory with permissions that allow read access only to the application user.
+
+ANS:C
+
+158.Your team has a tomcat-based Java application you need to deploy into development,test and production environments .After some research,you opt use Elastic Beanstalk due to its tight integration with your developer tools and RDS due to its ease of management. Your QA team lead points out that you need to roll a sanitized set of production data into your environment on a nightly basis . Similarly,other software teams in your erg want access to that same restored data via their EC2 instances in your VPC.The optimal setupfor persistence and security that meets the above requirements would the following.
+A. Create your RDS instance as part of your Elastic Beanstalk definition and alter its security group to allow access to it from hosts in your application subnets.
+B. Create your RDS instance separately and add its IP address to your application's DB connection strings in your code Alter its security group to allow access to it from hosts within your VPC's IP address block.
+C. Create your RDS instance separately and pass its DNS name to your app's DB connection string as an environment variable.Create a security group for client machines and add it as a valid source for DB traffic to the security group of the RDS instance itself.
+D. Create your RDS instance separately and pass its DNS name to your's DB connection string as an environment variable Alter its security group allow access to It from hosts In your application subnets.
+
+ANS:A
+
+159.You require the ability to analyze a custome(s clickstream data on a website so they can do behavioral analysis.Your customer needs to know what sequence of pages and ads their customer clicked on.This data will be used in real time to modify the page layouts as customers click through the site to increase stickiness and advertising click-through . Which option meets the requirements for captioning and analyzing this data?
+A Log clicks in weblogs by URL store to Amazon S3,and then analyze with Elastic MapReduce
+B. Push web clicks by session to Amazon Kinesis and analyze behavior <using Kinesis workers
+C. Write click events directly to Amazon Redshift and then analyze with SQL
+D. Publish web clicks by session to an Amazon SQS queue men periodically drain these events to Amazon RDS and analyze with sol
+
+ANS:B
+
+160. To seive Webtraffic for a popular product your chief financial officer and IT director have purchased 10 ml large heavy utilization Reseived Instances (Rls) evenly spread across two availability zones:Route 53 is used to deliver the traffic to an Elastic Load Balancer (ELS).After several months,the product grows even more popular and you need additional capacity As a result,your company purchases two C3.2xlarge medium utilization Ris.
+You register the two c3 2xlarge instances with your ELS and quickly find that the ml large instances are at 100% of capacity and the c3 2xlarge instances have significant capacity that's unused.
+Which option is the most cost effective and uses EC2 capacity most effectively?
+A Use a separate ELS for each instance type and distribute load to ELBs with Route 53 weighted round robin
+B. Configure Autoscaning group and Launch Configuration with ELS to add upto 10 more on- demand mi large instances when triggered by Cloudwatch shut off c3 2xiarge instances
+C. Route traffic to EC2 ml large and c3 2xlarge instances directly using Route 53 latency based routing and health checks shut off ELS
+D. Configure ELS with two c3 2xiarge Instances and use on-demand Autoscailng groupfor upto two additional c3.2xlarge instances Shut on mi.large instances .
+
+ANS:A
+
+161.You are implementing a URL whitelisting systemfor a company that wants to restrict outbound HTIP'S connect ions to specific domains from their EC2- hosted applications you deploy a single EC2 instance running proxy software and configure It to accept traffic from all subnets and EC2 instances in the VPC. You configure the proxy to only pass through traffic to domains that you define in its whitelist configurat ion You have a nightly maintenance window or 10 minutes where ail instances fetch new software updates.Each update Is about 200MB In size and there are 500 instances In the VPC that
+routinely fetch updates After a few days you notice that some machines are failing to successfully download some,but not all of their updates within the maintenance window.The download URLs used for these updates are correctly listed in the proxy's whitelist configurat ion and you are able to access them manually using a web browser on the instances.
+What might be happening? (Choose 2 answers)
+A You are running the proxy on an undersized EC2 instance type so network throughput is not sufficient for all instances to download their updates in time.
+B. You have not allocated enough storage to the EC2 instance running me proxy so the network buffer is filling up.causing some requests to fall
+C. You are running the proxy in a public subnet but have not allocated enough EIPs lo support the needed network throughput through the Internet Gateway (IGW)
+D. You are running the proxy on a affilelentiy-sized EC2 instance in a private subnet and its network throughput is being throttled by a NAT running on an undersized EO?instance
+E. The route table for the subnets containing the affected EC2 instances is not configured to direct network traffic for the software update locations to the proxy.
+
+ANS:A,B
+
+162.Your company has recently extended its datacenter into a VPC on AWS to add burst computing capacity as needed Members of your Network Operations Center need to be able to go to the AWS Management Console and administer Amazon EC2 instances as necessary You don't want to create new IAM users for each NOC member and make those users sign in again to the AWS Management Console Which option below will meet the needs for your NOC members?
+A Use OAuth 2 0 to retrieve temporary AWS security credentials to enable your NOC members to sign in to the AWS Management Console.
+B. Use web Identity Federation to retrieve AWS temporary security credentials to enable your NOC members to sign in to the AWS Management Console.
+C.  Use your on-premises SAML 2 0-compliant identity provider (IDP) to grant the NOC members federated access to the AWS Management Console via the AWS single sign-on (SSO) endpoint.
+D. Use your on-premises SAML2.0-compliam identity provider (IDP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS Management Console.
+
+ANS:C
+
+163.While creating an Amazon RDS DB,your first task is to set up a DB	that controls what IP addresses or EC2 instances have access to your DB Instance.
+A  Security Pool
+B. Secure Zone
+C. Security Token Pool
+D. Security Group
+
+ANS:D
+
+
+164.You are designing a social media site and are considering how to mitigate distributed denial-of- service (DDoS) attacks.Which of the below are viable mitigation techniques? (Choose 3 answers)
+A  Add multiple elastic network interfaces (ENls) to each EC2 instance·to increase the network bandwidth.
+B. Use dedicated instances to ensure that each instance has the maximum performance possible.
+C.  Use an Amazon CloudFront distribution for both static and dynamic content.
+D. Use an Elastic Load Balancer with auto scaling groups at the web.App and Amazon Relational Database Service (RDS) tiers
+E. Add alert Amazon CloudWatch to look for high Network in and CPU utilization.
+F. Create processes and capabilities to quickly add and remove rules t•o the instance OS firewall.
+
+ANS:D,E
+
+165.Your firm has uploaded a large amount of aerial image data to S3 In the past,in your on- premises environment,you used a dedicated group of seivers to oaten process this data and used Rabbit MQ -An open source messaging system to get job information to the seivers.Once processed the data would go to tape and be shipped offsite.Your manager told you to stay with the current design,and leverage AWS archival storage and messaging services to minimize cost.
+Which is correct?
+A Use SQS for passing job messages use Cloud Watch alarms to terminate EC2 worker instances when they become idle.Once data is processed,change the storage class of the S3 objects to Reduced Re-Oundancy Storage.
+B. Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SOS Once data is processed,
+C. Change the storage class of the S3 objects to Reduced Redundancy Storage.Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS Once data is processed,change the storage class of the S3 objects to Glacier.
+D. Use SNS to pass job messages use Cloud Watch alarms to terminate spot worker instances when they become idle.Once data is processed, change the storage class of the S3 object to Glacier.
+
+ANS:C
+
+166.An AWS customer is deploying an application mat is composed of an AutoScaling group of EC2 Instances.The customers security policy requires that every outbound connection from these instances to any other service within the cust•omers
+Virtual Private Cloud must be authenticated using a unique x 509 certificate that contains the specific instance-id.
+In addition an x 509 certificates must Designed by the custome s Key management service in order to be trusted for authentication. Which of the following configurations will support these requirements?
+A  Configure an IAM Role that grants access to an Amazon S3 object containin·g a signed certificate and configure me Auto Scaling group to launch instances with this role Have the instances bootstrap get the certificate from Amazon S3 upon first boot.
+B. Embed a certificate into the Amazon Machine Image that is used by the Auto Scaling group Have the launched instances generate a certificate signature request with the instance's assigned instance-id to the Key management service for signature.
+C. Configure the Auto Scaling group to send an SNS notification of the launch of a new instance to the trusted key management service.Have the Key management service generate a signed certificate and send it directly to the inewly launched instance.
+D. Configure the launched instances to generate a new certificate upon first boot Have the Key management service poll the AutoScaling groupfor assoc iated instances and send new instances a certificate signature (hat contains the specific instance-id.
+
+ANS:D
+
+
+167.You are developing a new mobile application and are considering storing user preferences in AWS.2w This would provide a more uniform cross-device experience to users using multiple mobile devices to access the application.The preference data for each user is estimated to be 50KB in size Additionally 5 million customers are expected to use the application on a regular basis.The solution needs to be cost-effective,highly available,scalable and secure, how would you design a solution to meet the above requirements?
+A  Setup an RDS MySQL instance in 2 availability zones to store the user preference data. Deploy a public facing application on a seiver in front of the database to manage security and access credentials
+B. Setup a DynamoDB table with an item for each user having the necessa.ry attributes to hold the user preferences.The mobile application will query the user preferences directly from the DynamoDB table. Utilize STS. Web Identity Federation,and DynamoDB Fine Grained Access Control to authenticate and authorize access.
+C. Setup an RDS MySQL instance with multiple read replicas in 2 availability zones to store the user preference data.The mobile application will query the user preferences from the read replicas. Leverage the MySQL user management and access privilege system to manage security and access credentials.
+D. Store the user preference data in S3 Setup a DynamoDB table with an item for each user and an item attribute pointing to the use S3 object. The mobile application will retrieve the S3 URLfrom DynamoDB and then access the S3 object directly utilize STS,Web identity Federation,and S3 ACLs to authenticate and authorize access.
+
+ANS:B
+
+168.You are running a news website in the eu-west-1 region that updates every 15 minutes.The website has a world-wide audience it uses an Auto Scaling group behind an Elastic Load Balancer and an Amazon RDS database Static content resides on Amazon S3,and is distributed through Amazon CloudFront. Your Auto Scaling group is set to trigger a scale up event at 60% CPU utilization,you use an Amazon RDS extra large DB instance with
+10.000 Provisioned IOPS its CPU utilization is around 80%.While freeable memory is in the 2 GB range.Web analytics reports show that the average load time of your web pages is around 1 5 to 2 seconds,but your SEO consultant wants to bring down the average load time to under 0.5 seconds.How would you improve page load times for your users? (Choose 3 answers)
+A  Lower the scale up trigger of your Auto Scaling group to 30% so it scales more aggressively.
+B. Add an Amazon ElastiCache caching layer to your application for storing sessions and frequent DB queries
+C. Configure Amazon CloudFront dynamic content support to enable caching of re-usable content from your site
+D. Switch Amazon RDS database to the high memory extra large Instance type
+E. Set up a second installation in another region,and use the Amazon Route 53 latency-based routing feature to select the right region.
+
+ANS:B,C,D
+
+169.Your company is getting ready to do a major public announcement of a social media site on AWS.The website is running on EC2 instances deployed across multiple Availability Zones with a Multi-AZ RDS MySQL Extra Large DB Instance.The site performs a high number of small reads and writes per second and relies on an eventual consistency model. After comprehensive tests you discover that there is read contention on RDS MySQL.
+Which are the best approaches to meet these requirements? (Choose 2 answers)
+A  Deploy ElasticCache in-memory cache running in each availability zone 
+B. Implement sharding to distribute load to multiple RDS MySQL instances 
+C. Increase the RDS MySQL Instance size and Implement provisioned IOPS
+D. Add an RDS MySQL read replica in each availability zone
+
+ANS:A,D
+
+170.You are designing an intrusion detect ion prevention (IDS/IPS) solution for a customer web application in a single VPC. You are considering the options for implementing IOS IPS protection for traffic coming from the Internet.
+Which of the following options would you consider? (Choose 2 answers)
+A Implement IDS/IPS agents on each Instance running In VPC
+B. Configure an instance in each subnet to switch its network interface card to promiscuous mode and analyze network traffic.
+C. Implement Elastic Load Balancing with SSL listeners In front of the web applications
+D. Implement a reverse proxy layer in front of web seivers and configure IDS/IPS agents on each reverse proxy seiver.
+
+ANS:A,D
+
+171.Your company policies require encryption of sensitive data at rest.You are considering the possible options for protecting data while storing it at rest on an EBS data volume,attached to an EC2 instance. Which of these options wouldl allow you to encrypt your data at rest? (Choose 3 answers)
+A Implement third party volume encryption tools
+B. Do nothing as EBSvolumes are encrypted by default
+C. Encrypt data inside your applications before storing it on EBS
+D. Encrypt data using native data encryption drivers at the file system level
+E. Implement SSL/TLS for all services running on the seiver
+
+ANS:A,C,D
+
+172.Your department creates regular analytics reports from your company's log files All log data is collected in Amazon S3 and processed by daily Amazon Elastic MapReduce (EMR) jobs that generate daily PDF reports and aggregated tables in CSV format for an Amazon Redshift data warehouse .Your CFO requests that you optimize the cost structure for this system. Which of the foll owing alternatives will lower costs without compromising average performance of the system or data integrity for the raw data?
+A  Use reduced redundancy storage (RRS) for PDF and csv data in Amazon S3.Add Spot instances to Amazon EMR jobs Use Reseived Instances for Amazon Redshift.
+B. Use reduced redundancy storage (RRS) for all data in S3.Use a combination of Spot instances and Reseived Instances for Amazon EMR jobs use Reseived instances for Amazon Redshift .
+C. Use reduced redundancy storage (RRS) for all data in Amazon S3 Add Spot Instances to Amazon EMR jobs Use Reseived Instances for Amazon Redshitf.
+D. Use reduced redundancy storage (RRS) for PDF and csv data in S3 Ad'd Spot Instances to EMR jobs Use Spot Instances for Amazon Redshift .
+
+ANS:A
+
+173.A web company is looking to implement an intrusion detection and prevention system into their deployed VPC.This platform should have the ability to scale to thousands of instances running inside of the VPC.
+How should they architect their solution to achieve these goals?
+A. Configure an instance with monitoring software and the elastic network interface (ENI) set to promiscuous mode packet sniffing to see an traffic across the VPC.
+B. Create a second VPC and route all traffic fromthe primary application VPC through the second VPC where the scalable virtualized IDS/IPS platform resides.
+C. Configure seivers running in the VPC using the host-based 'route' commands to send all traffic through the platform to a scalable virtualized IDS/ IPS.
+D. Configure each host with an agent that collects all network traffic and sends that traffic to the IDS/IPS platform for inspection.
+
+ANS:B
+
+174.You deployed your company website using Elastic Beanstalk and you enabled log file rotation to S3.An Elastic Map Reduce job is periodically analyzing the logs on S3 to build a usage dashboard that you share with your CIO.You recently improved overall performance of the website using Cloud Front for dynamic content delivery and your website as the origin After this architectural change,the usage dashboard shows that the traffic on your website dropped by an order of magnitude . How do you fix your usage dashboard'?
+A  Enable Cloud Front to deliver access logs to S3 and use them as input of the Elastic Map Reduce job.
+B. Turn on Cloud Trail and use trail log tiles on S3 as input of the Elastic Map Reduce job
+C. Change your log collection process to use Cloud Watch ELS metrics .as input of the Elastic Map Reduce job
+D. Use Elastic Beanstalk "Rebuild Environment" option to update log delivery to the Elastic Map Reduce job.
+E. Use Elastic Beanstalk 'Restart App seiver(s)" option to update log del very to the Elastic Map Reduce job.
+
+ANS:A
+
+175.You've been hired to enhance the overall security posture for a very large e-commerce site They have a well architected multi-tier application running in a VPC that uses ELBs in front of both the web and the app tier with static assets served directly from S3 They are using a combination of RDS and DynamoOB for their dynamic data and then archiving nightly into S3 for further processing with EMR They are concerned because they found questionable log entries and suspect someone is attempting to gain unauthorized access . Whic!h approach provides a cost effective scalable mitigation to this kind of attack?
+A Recommend mat they lease space at a DirectConnect partner location and establish a 1G DirectConnect connection to theirvPC they would then establish Internet connectivity into their space,filter the traffic in hardware Web Application Firewall fYVAF).And then pass the traffic through the DirectConnect connection into their application running in their VPC.
+B. Add previously identified hostile source IPs as an explicit INBOUND DENY NACL to the webtier subnet .
+C. Add a WAF tier by creating a new ELS and an AutoScalmg group of EC2 lmstances running a host-based WAF They would redirect Route 53 to resolve to the new WAF tier ELS The WAF tier would thier pass the traffic t•o the current webtier The webtier Security Groups would be updated to only allow traffic fromthe WAF tier Security Group
+D. Remove all but TLS 1 2 fromthe webtier ELS and enable Advanced Protocol Filtering This will enable the ELS itself to perform WAF functionality.
+
+ANS:C
+
+176.If I modify a DB Instance or the DB parameter group associated with the instance,should Ireboot the instance for the changes to take effect?
+A.  No
+B. Yes 
+
+ANS:B
+
+177.A read only news reporting site with a combined web and application tier and a database tier that receives large and unpredictable traffic demands mu able to respond to these traffic fluctuations automatically.What AWS services should be used meet these requirements?
+A. Stateless instances for the web and application tier synchronized using Elasticache Memcached in an autoscaimg group monitored with CloudWatch.And RDSwith read replicas
+B. Stateful instances for me web and application tier in an autoscalin9 group monitored with CloudWatch and RDS with read replicas
+C. Stateful instances for the web and application tier in an autoscalin9 group monitored with CloudWatch.And multi-AZ RDS
+D. Stateless instances for the web and application tier synchronized using ElastiCache Memcached in an autoscaling group monitored with CloudWatch and multi-AZ RDS
+
+ANS:A
+
+178.In the Amazon cloudwatch,which metric should I be checking to ensure that your DB Instance has enough free storage space?
+A. FreeStorage
+B. FreeStorageSpace
+C. FreeStorageVolume
+D. FreeDBStorageSpace
+
+ANS:B
+
+179.Your fortune 500 company has under taken a TCO analysis evaluating the use of Amazon S3 versus acquiring more hardware The outcome was that ail employees would be granted access to use Amazon S3 for storage of their personal documents. Which of the following will you need to consider so you can set up a solution that incorporates single sign-on from your corporate AD or LDAP directory and restricts access for each user to a designated user folder in a bucket? (Choose 3 Answers)
+A  Setting up a federation proxy or identity provider
+B. Using AWS Security Token Service to generate temporary tokens
+C. Tagging each folder in the bucket
+D. Configuring IAM role
+E. Setting up a matching IAM user for every user in your corporate directory that needs access to a folder in the bucket
+
+ANS:A,B,D
+
+180.An AWS customer runs a public blogging website .The site users upload two million blog entries a month The average blog entry size is 200 KB.The access rate to blog entries drops to negligible 6 months after publication and users rarely access a blog entry 1 year after publication.Additionally,blog entries have a high update rate during the first 3 months following publication,this drops to no updates after 6 months .The customer wants to use CloudFront to improve his use(s load times . Which of the following recommendations would you make to the customer?
+A Duplicate entries into two different buckets and create two separate CloudFront distributions where S3 access is restricted only to Cloud Front identity
+B. Create a CloudFront distribution with "US'Europe price class for US/Europe users and a different CloudFront distribution with All Edge Locations'for the remaining users.
+C. Create a CloudFront distribution with S3 access restricted only to the·CloudFront identity and partition the blog entry's location in S3 according to the month it was uploaded to be used with CloudFront behaviors .
+D. Create a CloudFronl distribution with Restrict Viewer Access Foiwardl Query string set to true and minimum TIL of 0.
+
+ANS:C
+
+
+181.Your company produces customer commissioned one-of-a-kind skiing helmets combining nigh fashion with customtechnical enhancements Customers can show off their Individuality on the ski slopes and have access to head-up-displays . GPS rear-view cams and any other technical innovation they wish to embed in the helmet .
+The current manufacturing process is data rich and complex including assessments to ensure that the custom electronics and materials used to assemble the helmets are to the highest standards Assess ments are a mixture of human and automated assessments you need to add a new set of assessment to model the failure modes of the custom electronics using GPUs with CUD across a cluster of seivers with low latency networking.
+What architecture would allow you to automate the existing process using a hybrid approach and ensure that the architecture can support the evolution of processes over time?
+A  Use AWS Data Pipeline to manage movement of data & meta-data and assessments Use an auto-scaling group of G2 instances in a placement group.
+B. Use Amazon Simple Workflow (SWF) 10 manages assessments,movement of data & meta-data Use an auto-scaling group of G2 instances in a placement group.
+C. Use Amazon Simple Workflow (SWF) lo manages assessments movement of data & meta-data Use an auto-scaling group of C3 instances with SR-IOV (Single Root 1/0 Virtualization).
+D. Use AWS data Pipeline to manage movement of data & meta-data and assessments use auto- scaling group of C3 with SR-IOV (Single Root 1/0 virtualization).
+
+ANS:B
+
+
+182.Is there a limit to how many groups a user can be in?
+A.  Yes for all users
+B. Yes for all users except root
+C. No
+D. Yes unless special permission granted
+
+ANS:D
+
+183.After an Amazon VPC instance is launched,can Ichange the VPC security groups it belongs to?
+A. Only if the tag "VPC_Change_Group" is true
+B. Yes .You can.
+C. No.You cannot .
+D. Only if the tag "VPC Change Group" is true
+
+ANS:B
+
+
+184.Will my standby RDS instance be in the same Availability Zone as my primary?
+A. Only for Oracle RDS types
+B. Yes
+C. Only if configured at launch
+D. No
+
+ANS:D
+
+
+185.True or False:When you perform a restore operation to a point in time or from a DB Snapshot,a new DB Instance is created with a new endpoint.
+A.  FALSE
+B. TRUE
+
+ANS:B
+
+186.While launching an RDS DB instance,on which page Ic.an select the Availability Zone?
+A.  REVIEW
+B. DB INSTANCE DETAILS
+C. MANAGEMENT  OPTIONS
+D. ADDITIONAL  CONFIGURATION
+
+ANS:D
+
+187.The Trusted Advisor service provides insight regarding which four categories of an AWS account?
+A Security,fault tolerance,high availability,and conne-ctivity
+B. Security,access control,high availability,and performance
+C. Performance,cost optimization,security,and fault tolerance
+D. Performance,cost optimization,access control,and connectivity
+
+ANS:C
+
+
+188.Is Federated Storage Engine currently supported by Amazon RDS for MySQL?
+A. Only for Oracle RDS instances
+B. No
+C. Yes
+D. Only in VPC Answer:B
+
+ANS:B
+
+
+189.Select the correct statement :
+A. You don1need not specify the resource identifier while stopping a resource
+B. You can terminate,stop,or delete a resource based solely on its tags
+C. You can1terminate, stop, or delete a resource based solely on its tags
+D. You don1need to specify the resource identifier while terminating a resource
+
+ANS:C
+
+190.Through which of the following interfaces is AWS Identity and Access Management available?
+A) AWS Management Console
+8) Command line interface (CU)
+C) IAM Query API
+D) Existing libraries
+
+A. Only through Command line interface (CU)
+B. A,8 and C
+C. A and C
+D. All of the above
+
+ANS:D
+
+
+
+
